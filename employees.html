@@ -1074,7 +1074,7 @@
 
 
                 <!-- Default Wizard -->
-                  <div class="col-12 mb-4">
+                  <div class="col-12 mb-4 mt-4">
           
                     <div class="bs-stepper wizard-numbered mt-2">
                       <div class="bs-stepper-header">
@@ -1396,7 +1396,7 @@
                                 <input type="text" id="Taxpayer-ID" class="form-control" placeholder=" رقم هوية دافع الضرائب " />
                               </div>
                               <div class="col-12 d-flex justify-content-between">
-                                <button class="btn btn-label-secondary btn-prev" disabled>
+                                <button class="btn btn-label-secondary btn-prev">
                                   <i class="ti ti-arrow-left me-sm-1 me-0"></i>
                                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                 </button>
@@ -1413,74 +1413,105 @@
                               <h6 class="mb-0 fs-3 fw-bold">البيانات المرافقين</h6>
                               <small class="fs-6">أدخل تفاصيل المرافقين.</small>
                             </div>
-                            <div class="row g-3">
-                              <div class="col-md-4">
-                                <label class="form-label" for="username-1">الاسم بالعربى</label>
-                                <input type="text" id="username-1" class="form-control" placeholder="الاسم بالعربى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="username-e-1">الاسم بالانجيلزى</label>
-                                <input type="text" id="username-e-1" class="form-control" placeholder="الاسم بالانجيلزى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="date-form-5"> تاريخ الميلاد</label>
-                                <input type="date" id="date-form-5" class="form-control"  />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Relevance-2"> الصلة</label>
-                                <select class="select2 " id="Relevance-2">
-                                  <option>  اختر الصلة</option>
-                                  <option>اب</option>
-                                  <option>ابن</option>
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="phone-number"> الهاتف</label>
-                                <input type="text" id="phone-number" class="form-control" placeholder="الهاتف " />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="email-1">البريد الاكترونى</label>
-                                <input
-                                  type="email"
-                                  id="email-1"
-                                  class="form-control"
-                                  placeholder="john.doe@email.com"
-                                  aria-label="john.doe" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Nationality ">   الجنسية</label>
-                                <input type="text" id="Nationality " class="form-control" placeholder=" الجنسية  " />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="type-of ">   الجنس</label>
-                                <input type="text" id="type-of " class="form-control" placeholder="   الجنس" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Medical ">  التامين الطبي</label>
-                                <input type="text" id="Medical " class="form-control" placeholder="  التامين الطبي" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="number-tect">  عدد تزاكر الطيران</label>
-                                <input type="text" id="number-tect" class="form-control" placeholder="  عدد تزاكر الطيران" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="proof"> نوع الإثبات</label>
-                                <input type="text" id="proof" class="form-control" placeholder=" نوع الإثبات" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="number-proof"> رقم الإثبات</label>
-                                <input type="text" id="number-proof" class="form-control" placeholder=" رقم الإثبات" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="number-Residency"> رقم الإقامة</label>
-                                <input type="text" id="number-Residency" class="form-control" placeholder=" رقم الإقامة" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="date-form-6">  تاريخ نهاية الإقامة</label>
-                                <input type="date" id="date-form-6" class="form-control"  />
-                              </div>
-                              <div class="col-12 d-flex justify-content-between">
-                                <button class="btn btn-label-secondary btn-prev" disabled>
+
+                            <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+
+                              <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
+                                <thead class="table-light">
+                                  <tr class="fw-bold">
+                                    <th class="fw-bold">م</th>
+                                    <th class="fw-bold"> الاسم بالعربى</th>
+                                    <th class="fw-bold">الاسم بالانجيلزى</th>
+                                    <th class="fw-bold"> تاريخ الميلاد</th>
+                                    <th class="fw-bold"> الصلة</th>
+                                    <th class="fw-bold"> الهاتف</th>
+                                    <th class="fw-bold"> البريد الاكترونى</th>
+                                    <th class="fw-bold"> الجنسية</th>
+                                    <th class="fw-bold"> الجنس</th>
+                                    <th class="fw-bold"> التامين الطبي</th>
+                                    <th class="fw-bold"> عدد تزاكر الطيران</th>
+                                    <th class="fw-bold"> نوع الإثبات</th>
+                                    <th class="fw-bold">  رقم الإثبات</th>
+                                    <th class="fw-bold">  رقم الإقامة</th>
+                                    <th class="fw-bold">   تاريخ نهاية الإقامة</th>
+                                    <th class="fw-bold"> Actions</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                  <tr>
+                                    <td></td>
+                                    <td> 
+                                      <input type="text" id="username-1" class="form-control" placeholder="الاسم بالعربى" />
+                                     </td>
+                              
+                                    <td>   
+                                       <input type="text" id="username-e-1" class="form-control" placeholder="الاسم بالانجيلزى" />
+                                    </td>
+                                    <td> 
+                                      <input type="date" id="date-form-5" class="form-control"  />
+                                
+                                    <td>  
+                                      <select class="select2 " id="Relevance-2">
+                                        <option>  اختر الصلة</option>
+                                        <option>اب</option>
+                                        <option>ابن</option>
+                                      </select>
+                                    </td>
+                                    <td>   
+                                       <input type="text" id="phone-number" class="form-control" placeholder="الهاتف " />
+                                    </td>
+                                    <td>
+                                      <input
+                                      type="email"
+                                      id="email-1"
+                                      class="form-control"
+                                      placeholder="john.doe@email.com"
+                                      aria-label="john.doe" />
+                                    </td>
+                                    <td>
+                                      <input type="text" id="Nationality " class="form-control" placeholder=" الجنسية  " />
+
+                                    </td>
+                                    <td>
+                                      <input type="text" id="type-of " class="form-control" placeholder="   الجنس" />
+
+                                    </td>
+                                    <td>
+                                      <input type="text" id="Medical " class="form-control" placeholder="  التامين الطبي" />
+
+                                    </td>
+                                    <td>                    
+                                      
+                                      <input type="text" id="number-tect" class="form-control" placeholder="  عدد تزاكر الطيران" />
+                                    </td>
+                                    <td>                    
+                                      
+                                      <input type="text" id="proof" class="form-control" placeholder=" نوع الإثبات" />
+                                    </td>
+                                    <td>
+                                      <input type="text" id="number-proof" class="form-control" placeholder=" رقم الإثبات" />
+
+                                    </td>
+                                    <td>
+                                      <input type="text" id="number-Residency" class="form-control" placeholder=" رقم الإقامة" />
+
+                                    </td>
+                                    <td>
+                                      <input type="date" id="date-form-6" class="form-control"  />
+                                    </td>
+                                    <td class="d-flex">
+                                      <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف"><i class="ti ti-trash  fs-4"></i> </a>
+                                    
+                                    </td>
+                                  </tr>
+                                </tbody>
+                            
+                              </table>
+
+                            </div>
+
+                              <div class="col-12 d-flex justify-content-between mt-2">
+                                <button class="btn btn-label-secondary btn-prev">
                                   <i class="ti ti-arrow-left me-sm-1 me-0"></i>
                                   <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                 </button>
@@ -1490,7 +1521,7 @@
                                 </button>
                               </div>
                             </div>
-                          </div>
+                      
                             <!-- file-links -->
                             <div id="file-links" class="content">
                               <div class="content-header mb-3">
@@ -1537,11 +1568,15 @@
                                  
                                 </div>
                                 <div class="col-12 d-flex justify-content-between">
+                                
                                   <button class="btn btn-label-secondary btn-prev">
                                     <i class="ti ti-arrow-left me-sm-1 me-0"></i>
                                     <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                   </button>
-                                  <button class="btn btn-primary btn-submit">حفظ</button>
+                                  <div>
+                                    <button class="btn btn-primary btn-submit">حفظ</button>
+                                    <a class="btn btn-label-secondary btn-submit" href="all-employees.html">مشاهدة الكل </a>
+                                  </div>
                                 </div>
                              
                             </div>

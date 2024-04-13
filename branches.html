@@ -42,7 +42,12 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
+   
    
    
     <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
@@ -570,19 +575,19 @@
                         <div data-i18n="People">أشخاص</div>
                       </a>
 
-                      <ul class="menu-sub">
+                      <ul class="menu-sub ">
                         <li class="menu-item">
                           <a href="javascript:void(0)" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons ti ti-menu-2"></i>
                             <div data-i18n="Companies"> الشركات</div>
                           </a>
                           <ul class="menu-sub">
-                            <li class="menu-item">
+                            <li class="menu-item ">
                             <a href="Companies.html" class="menu-link">
                               <div data-i18n="add-Companies"> اضافة/شركة</div>
                             </a>
                             </li>
-                             <li class="menu-item">
+                             <li class="menu-item ">
                               <a href="all-Companies.html" class="menu-link">
                                 <div data-i18n="view-Companies"> مشاهدة/شركة</div>
                               </a>
@@ -590,7 +595,7 @@
                              
                           </ul>
                         </li>
-                        <li class="menu-item active">
+                        <li class="menu-item ">
                           <a href="javascript:void(0)" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons ti ti-users"></i>
                             <div data-i18n="employees">  الموظفين</div>
@@ -601,7 +606,7 @@
                               <div data-i18n="add-employees"> اضافة/الموظفين</div>
                             </a>
                             </li>
-                             <li class="menu-item active">
+                             <li class="menu-item ">
                               <a href="all-employees.html" class="menu-link">
                                 <div data-i18n="view-employees"> مشاهدة/الموظفين</div>
                               </a>
@@ -609,7 +614,7 @@
                              
                           </ul>
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item active">
                           <a href="branches.html" class="menu-link">
                             <i class="menu-icon tf-icons ti ti-arrows-maximize"></i>
                             <div data-i18n="branches"> الفروع</div>
@@ -1068,12 +1073,12 @@
                 <div class="card comonent-hader-top">
                    <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
                     <div class="row mx-0 d-flex flex-wrap justify-content-between align-items-center  mb-3 align-items-center pt-4">
-                      <div class="col col-md-8  mb-md-4 mb-2">
-                        <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">بيانات الموظفين</span>  </strong>
+                      <div class="col col-md-8  mb-md-4 mb-2 px-0">
+                        <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> الفروع</span>  </strong>
 
                       </div>
                       <div class="col text-end">
-                        <a href="employees.html" class="btn btn-primary waves-effect waves-light">اضافه موظف</a>
+                        <a data-bs-target="#addtruck" data-bs-toggle="modal" class="btn btn-primary text-white waves-effect waves-light">اضافه فرع جديد</a>
       
                       </div>
                     </div>
@@ -1085,20 +1090,7 @@
                           <tr>
                          
                             <th>م</th>
-                            <th> رقم هوية الموظف</th>
-                            <th> صورة</th>
-                            <th>  الاسم</th>
-                            <th> الجنس</th>
-                            <th>   الجنسية</th>
-                             <th>القسم </th>
-                             <th> الادارة</th>
-                             <th>مركز التكلفة</th>
-                             <th> رقم الاثبات</th>
-                             <th> تاريخ نهايه الاقامة</th>
-                             <th>المدة المتبقية</th>
-                             <th> الحالة</th>
-                             <th> الاجراءات</th>
-                          
+                            <th>    الاسم</th>
                             <th>Action</th>
                           </tr>
                         </thead>
@@ -1106,23 +1098,11 @@
                             <tr>
                               <td></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                             
+                            
                               <td>
                                 <div class="d-flex justify-content-center">
                                 
-                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#addtruck" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
+                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-branches" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
                                   <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
                                 
                                 </div>
@@ -1135,54 +1115,81 @@
                    </div>
                 </div>
             </div>
-  <!-- Add Hardware Modal -->
-  <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-3 p-md-3">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold text-tilte-b">   تعديل بيانات الموظف</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body px-0">
-          <form class="row component-form">
-         
-            <div class="col-12 col-lg-8">
-              <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
+          <!-- Add Hardware Modal -->
+          <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+              <div class="modal-content p-3 ">
+                <div class="modal-header px-0">
+                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    اضافة الفرع</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-0">
+                  <form class="row component-form  mx-0">
+                    <div class="col-md-12">
+                      <label class="form-label" for="componyname-e"> الاسم</label>
+                      <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
+                    </div>
+                    <div class="pt-2">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
 
-             </div>
-           
-          </form>
-          
-        </div>
-       
-      </div>
-    </div>
-   </div>
-   <!---->
-    <!-- delet Modal -->
-    <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
-        <div class="modal-content p-1 p-md-3">
-          <button
-            type="button"
-            class="btn-close btn-pinned"
-            data-bs-dismiss="modal"
-            aria-label="Close"></button>
-          <div class="modal-body text-center">
-              <h3 class="role-title mb-2 fs-5">
-                هل انت متاكد من حذف العنصر؟
-              </h3>
-            
-            <div class="col-11 col-lg-12 mb-3">
-              <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
-              <button  type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
+                    </div>
+                  </form>
+                 
+              
+              </div>
             </div>
-          
-        
           </div>
-        </div>
-      </div>
-    </div>
+          </div>
+          <!---->
+          <!--edit-->
+          <div class="modal fade " id="edit-branches" tabindex="-1" aria-modal="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+              <div class="modal-content p-3 ">
+                <div class="modal-header px-0">
+                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    تعديل الفرع</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-0">
+                  <form class="row component-form  mx-0">
+                    <div class="col-md-12">
+                      <label class="form-label" for="componyname-e"> الاسم</label>
+                      <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
+                    </div>
+                    <div class="pt-2">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
+
+                    </div>
+                  </form>
+                 
+              
+              </div>
+            </div>
+          </div>
+          </div>
+            <!-- delet Modal -->
+            <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
+                <div class="modal-content p-1 p-md-3">
+                  <button
+                    type="button"
+                    class="btn-close btn-pinned"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                  <div class="modal-body text-center">
+                      <h3 class="role-title mb-2 fs-5">
+                        هل انت متاكد من حذف العنصر؟
+                      </h3>
+                    
+                    <div class="col-11 col-lg-12 mb-3">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
+                      <button  type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
+                    </div>
+                  
+                
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
