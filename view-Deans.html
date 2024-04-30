@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
    
    
@@ -870,7 +872,7 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
                 <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> بيانات الموظفين</span>  </strong>
+                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> بيانات المرافقين</span>  </strong>
                   <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
                     <!--item-->
                       <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
@@ -885,9 +887,9 @@
                                 <div class="col-sm-7 col-12">
                                   <div class="card-body text-sm-end text-center ps-sm-0">
                                     <a href="employees.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
-                                  اضافة بيانات الموظفين
+                                  اضافة بيانات المرافقين
                                     </a>
-                                    <p class="mb-0 mt-1">Add Corporate data , if it does not exist</p>
+                                    <p class="mb-0 mt-1">Add deans data , if it does not exist</p>
                                   </div>
                                 </div>
                               </div>
@@ -910,19 +912,19 @@
                           <tr>
                          
                             <th>م</th>
-                            <th> رقم هوية الموظف</th>
-                            <th> صورة</th>
-                            <th>  الاسم</th>
+                            <th>   الموظف</th>
+                           
+                            <th>  اسم المرافق</th>
                             <th> الجنس</th>
                             <th>   الجنسية</th>
-                             <th>القسم </th>
-                             <th> الادارة</th>
-                             <th>مركز التكلفة</th>
+                             <th>الصلة </th>
+                             <th> تاريخ الميلاد </th>
+                             <th> نوع اللإثبات</th>
                              <th> رقم الاثبات</th>
                              <th> تاريخ نهايه الاقامة</th>
-                             <th>المدة المتبقية</th>
-                             <th> الحالة</th>
-                             <th> الاجراءات</th>
+                             <th> رقم الإقامة</th>
+                            
+                             
                           
                             <th>Action</th>
                           </tr>
@@ -935,20 +937,19 @@
                               <td></td>
                               <td></td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                             
                               <td></td>
                               <td></td>
                               <td></td>
                               <td></td>
                               <td></td>
                              
+                       
+                             
                               <td>
                                 <div class="d-flex justify-content-center">
                                 
-                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="edit-employess.html" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
-                                  <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="view-Deans.html" title="مشاهدة"><i class="ti ti-eye  fs-4"></i> المرافقين</a>
+                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="javascript:void(0);"  title="تعديل" data-bs-target="#editRoleModal" data-bs-toggle="modal"><i class="ti ti-pencil  fs-4"></i> </a>
 
                                   <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
                                 
@@ -964,6 +965,92 @@
             </div>
 
    <!---->
+     <!-- editRoleModal -->
+     <div class="modal fade" id="editRoleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg  modal-dialog-centered modal-add-new-role">
+        <div class="modal-content p-1 p-md-3">
+          <button
+            type="button"
+            class="btn-close btn-pinned"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+          <div class="modal-body">
+             <form class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label" for="username">الاسم بالعربى</label>
+                <input type="text" id="username" class="form-control" placeholder="الاسم بالعربى" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="username-e">الاسم بالانجيلزى</label>
+                <input type="text" id="username-e" class="form-control" placeholder="الاسم بالانجيلزى" />
+              </div>
+              
+              <div class="col-md-4">
+                <label class="form-label" for="date-form"> تاريخ الميلاد</label>
+                <input type="date" id="date-form" class="form-control"  />
+              </div>
+            
+              <div class="col-md-4">
+                <label class="form-label" for="Relevance-2">الصلة</label>
+                <select class="select2 " id="Relevance-2">
+                  <option>  اختر الصلة</option>
+                  <option>اب</option>
+                  <option>ابن</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="phone"> الهاتف</label>
+                <input type="text" id="phone" class="form-control" placeholder=" الهاتف" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="email">البريد الاكترونى</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="john.doe@email.com"
+                  aria-label="john.doe" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="Nationality">الجنسية</label>
+                <select
+                  class="select2 w-auto" id="Nationality">
+                  <option>  مصرى</option>
+                  <option>French</option>
+                  <option>Spanish</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="Type">الجنس</label>
+                <select class="select2" id="Type">
+                  <option label=" "></option>
+                  <option>ذكر</option>
+                  <option>انثى</option>
+            
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="Type-number">  نوع الإثبات</label>
+                <input type="text" id="Type-number" class="form-control" placeholder=" نوع الإثبات" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="Proof-number">  رقم الإثبات</label>
+                <input type="text" id="Proof-number" class="form-control" placeholder=" رقم الإثبات" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="number-of">  رقم الإقامة</label>
+                <input type="text" id="number-of" class="form-control" placeholder=" رقم الإقامة" />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="date-form-2">  تاريخ نهاية الإقامة</label>
+                <input type="date" id="date-form-2" class="form-control"  />
+              </div>
+             </form>
+        
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- delet Modal -->
     <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
@@ -1077,7 +1164,11 @@
     <script src="./assets/vendor/libs/select2/select2.js"></script>
     <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
     <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
-    
+    <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
+
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 

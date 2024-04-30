@@ -42,8 +42,11 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
-   
    
     <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -870,124 +873,539 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
                 <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> بيانات الموظفين</span>  </strong>
-                  <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
-                    <!--item-->
-                      <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                            
-                            <div class="card h-100">
-                              <div class="row h-100">
-                                <div class="col-sm-5 col-12">
-                                  <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                                    <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
-                                  </div>
-                                </div>
-                                <div class="col-sm-7 col-12">
-                                  <div class="card-body text-sm-end text-center ps-sm-0">
-                                    <a href="employees.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light">
-                                  اضافة بيانات الموظفين
-                                    </a>
-                                    <p class="mb-0 mt-1">Add Corporate data , if it does not exist</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        
-                      </div>
-                    <!--item-->
-                      
+                  <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-4">
+                    <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
+                      <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> تعديل بيانات الموظف</span>  </strong>
+
+
+                    </div>
+                    <div class="col text-end">
+                      <a href="view-employees.html" class="btn btn-primary waves-effect waves-light btn-add"> مشاهدة الكل</a>
+    
+                    </div>
                   </div>
+                  
                 </div>
               
-              </div>
-                <div class="card comonent-hader-top p-2 mt-4">
-                   <div class="card-body py-2 px-2 card-widget-separator">
+             </div>
+              <div class="card comonent-hader-top mt-4">
+                <div class="card-body  card-widget-separator">
 
-                    <div class="card-datatable text-nowrap  table-responsive pt-0">
-                        
-                      <table class=" table table-bordered table-hover rounded">
-                        <thead class="table-light">
-                          <tr>
-                         
-                            <th>م</th>
-                            <th> رقم هوية الموظف</th>
-                            <th> صورة</th>
-                            <th>  الاسم</th>
-                            <th> الجنس</th>
-                            <th>   الجنسية</th>
-                             <th>القسم </th>
-                             <th> الادارة</th>
-                             <th>مركز التكلفة</th>
-                             <th> رقم الاثبات</th>
-                             <th> تاريخ نهايه الاقامة</th>
-                             <th>المدة المتبقية</th>
-                             <th> الحالة</th>
-                             <th> الاجراءات</th>
-                          
-                            <th>Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                             
-                              <td>
-                                <div class="d-flex justify-content-center">
-                                
-                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="edit-employess.html" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
-                                  <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" href="view-Deans.html" title="مشاهدة"><i class="ti ti-eye  fs-4"></i> المرافقين</a>
 
-                                  <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
-                                
-                                </div>
-                              </td>
-                            </tr>
-                            
-                        </tbody>
-                      </table>
-                    </div>
-                   </div>
-                </div>
-            </div>
-
-   <!---->
-    <!-- delet Modal -->
-    <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
-        <div class="modal-content p-1 p-md-3">
-          <button
-            type="button"
-            class="btn-close btn-pinned"
-            data-bs-dismiss="modal"
-            aria-label="Close"></button>
-          <div class="modal-body text-center">
-              <h3 class="role-title mb-2 fs-5">
-                هل انت متاكد من حذف العنصر؟
-              </h3>
-            
-            <div class="col-11 col-lg-12 mb-3">
-              <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
-              <button  type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
-            </div>
+                <!-- Default Wizard -->
+                  <div class="col-12 mb-4">
           
-        
-          </div>
-        </div>
-      </div>
-    </div>
+                    <div class="bs-stepper wizard-numbered mt-2">
+                      <div class="bs-stepper-header">
+                        <div class="step" data-target="#account-details">
+                          <button type="button" class="step-trigger">
+                            <span class="bs-stepper-circle">1</span>
+                            <span class="bs-stepper-label">
+                              <span class="bs-stepper-title">البيانات الشخصية</span>
+                              <span class="bs-stepper-subtitle">Setup Account Details</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="line">
+                          <i class="ti ti-chevron-right"></i>
+                        </div>
+                        <div class="step" data-target="#personal-info">
+                          <button type="button" class="step-trigger">
+                            <span class="bs-stepper-circle">2</span>
+                            <span class="bs-stepper-label">
+                              <span class="bs-stepper-title">تفاصيل الشركة</span>
+                              <span class="bs-stepper-subtitle">Add Company details </span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="line">
+                          <i class="ti ti-chevron-right"></i>
+                        </div>
+                        <div class="step" data-target="#social-links">
+                          <button type="button" class="step-trigger">
+                            <span class="bs-stepper-circle">3</span>
+                            <span class="bs-stepper-label">
+                              <span class="bs-stepper-title">تفاصيل البنك</span>
+                              <span class="bs-stepper-subtitle">Add Bank details</span>
+                            </span>
+                          </button>
+                        </div>
+
+                        <div class="line">
+                          <i class="ti ti-chevron-right"></i>
+                        </div>
+                        <div class="step" data-target="#Escorts-links">
+                          <button type="button" class="step-trigger">
+                            <span class="bs-stepper-circle">4</span>
+                            <span class="bs-stepper-label">
+                              <span class="bs-stepper-title"> المرافقين</span>
+                              <span class="bs-stepper-subtitle">Add Escorts details</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="line">
+                          <i class="ti ti-chevron-right"></i>
+                        </div>
+                        <div class="step" data-target="#file-links">
+                          <button type="button" class="step-trigger">
+                            <span class="bs-stepper-circle">5</span>
+                            <span class="bs-stepper-label">
+                              <span class="bs-stepper-title"> مستندات</span>
+                              <span class="bs-stepper-subtitle">Add Escorts details</span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="bs-stepper-content">
+                        <form onSubmit="return false">
+                          <!-- Account Details -->
+                          <div id="account-details" class="content">
+                            <div class="content-header mb-3">
+                              <h6 class="mb-0 fs-3 fw-bold">البيانات الشخصية</h6>
+                              <small class="fs-6">أدخل تفاصيل حسابك.</small>
+                            </div>
+                            <div class="row g-3">
+                              <div class="col-md-12">
+                                <label class="form-label" for="image-add"> اضافه صوره</label>
+                                <div class="img-porfoil mb-3">
+                                  <div class="avatar-edit">
+                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                    <label for="imageUpload">
+                                     <img src="./assets/img/avatars/pen.png" style="width: 25px;">
+    
+                                    </label>
+                                  </div>
+                                  <div class="avatar-preview">
+                                    <div id="imagePreview" style="background-image: url(./assets/img/avatars/1.png);">
+                                    </div>
+                                  
+                                  </div>
+                                  </div>
+                                </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="username">الاسم بالعربى</label>
+                                <input type="text" id="username" class="form-control" placeholder="الاسم بالعربى" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="username-e">الاسم بالانجيلزى</label>
+                                <input type="text" id="username-e" class="form-control" placeholder="الاسم بالانجيلزى" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="date-form"> تاريخ الميلاد</label>
+                                <input type="date" id="date-form" class="form-control"  />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Type">الجنس</label>
+                                <select class="select2" id="Type">
+                                  <option label=" "></option>
+                                  <option>ذكر</option>
+                                  <option>انثى</option>
+                            
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="phone"> الهاتف</label>
+                                <input type="text" id="phone" class="form-control" placeholder=" الهاتف" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="address-1"> العنوان المحلي (عربي)</label>
+                                <input type="text" id="address-1" class="form-control" placeholder="العنوان بالعربى" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="address-2"> العنوان المحلي (إنجليزي)</label>
+                                <input type="text" id="address-2" class="form-control" placeholder=" العنوان انجيلزى" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="address-3">  العنوان الدائم</label>
+                                <input type="text" id="address-3" class="form-control" placeholder="  العنوان الدائم" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Postal-code">   الرمز البريدي</label>
+                                <input type="text" id="Postal-code" class="form-control" placeholder="   الرمز البريدي" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Postal-box">   الصندوق البريدي</label>
+                                <input type="text" id="Postal-box" class="form-control" placeholder="   الصندوق البريدي" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="email">البريد الاكترونى</label>
+                                <input
+                                  type="email"
+                                  id="email"
+                                  class="form-control"
+                                  placeholder="john.doe@email.com"
+                                  aria-label="john.doe" />
+                              </div>
+                              <div class="col-md-4 form-password-toggle">
+                                <label class="form-label" for="password">كلمة المرور</label>
+                                <div class="input-group input-group-merge">
+                                  <input
+                                    type="password"
+                                    id="password"
+                                    class="form-control"
+                                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                    aria-describedby="password2" />
+                                  <span class="input-group-text cursor-pointer" id="password2"
+                                    ><i class="ti ti-eye-off"></i
+                                  ></span>
+                                </div>
+                              </div>
+                              <div class="col-12 d-flex justify-content-between">
+                                <button class="btn btn-label-secondary btn-prev" disabled>
+                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button class="btn btn-primary btn-next">
+                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                                  <i class="ti ti-arrow-right"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Cmopany Info -->
+                          <div id="personal-info" class="content">
+                            <div class="content-header mb-3">
+                              <h6 class="mb-0 fs-3 fw-bold">البيانات الشركة</h6>
+                              <small class="fs-6">أدخل تفاصيل الشركة.</small>
+                            </div>
+                            <div class="row g-3">
+                              <div class="col-md-4">
+                                <label class="form-label" for="Employee-ID">رقم هوية الموظف</label>
+                                <input type="text" id="Employee-ID" class="form-control" placeholder="رقم هوية الموظف" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Cmopany">الشركة</label>
+                                <select
+                                  class="select2 w-auto" id="Cmopany">
+                                  <option>شركة الاهرامات الارابعه</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Administration">الادارة</label>
+                                <select
+                                  class="select2 w-auto" id="Administration">
+                                  <option>شركة الاهرامات الارابعه</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="job-name">الوظيفة (عربي)</label>
+                                <input type="text" id="job-name" class="form-control" placeholder="الوظيفة (عربي)" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="job-name-e">الوظيفة (انجيلزى)</label>
+                                <input type="text" id="job-name-e" class="form-control" placeholder="الوظيفة (عربي)" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Accrued-name"> الإجازات المستحقة</label>
+                                <input type="text" id="Accrued-name" class="form-control" placeholder=" الإجازات المستحقة" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Balance ">الرصيد المستخدم من قبل</label>
+                                <input type="text" id="Balance " class="form-control" placeholder=" الرصيد المستخدم من قبل" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="date-form-1"> تاريخ الانضمام</label>
+                                <input type="date" id="date-form-1" class="form-control"  />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Nationality">الجنسية</label>
+                                <select
+                                  class="select2 w-auto" id="Nationality">
+                                  <option>  مصرى</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="account">الحساب</label>
+                                <select
+                                  class="select2 w-auto" id="account">
+                                  <option>  مصرى</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Branch">الفرع</label>
+                                <select class="select2 " id="Branch">
+                                  <option>  اختر الفرع</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Region">المنطقة</label>
+                                <select
+                                  class="select2 w-auto" id="Region">
+                                  <option>  اختر المنطقة</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="cost">مركز التكلفة</label>
+                                <select
+                                  class="select2 w-auto" id="cost">
+                                  <option>  اختر مركز التكلفة</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Type-of"> نوع الإقامة</label>
+                                <input type="text" id="Type-of" class="form-control" placeholder="نوع الإقامة" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Proof-number">  رقم الإثبات</label>
+                                <input type="text" id="Proof-number" class="form-control" placeholder=" رقم الإثبات" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="date-form-2">  تاريخ نهاية الإقامة</label>
+                                <input type="date" id="date-form-2" class="form-control"  />
+                              </div>
+                              <div class="col-12 d-flex justify-content-between">
+                                <button class="btn btn-label-secondary btn-prev">
+                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button class="btn btn-primary btn-next">
+                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                                  <i class="ti ti-arrow-right"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Bank Links -->
+                          <div id="social-links" class="content">
+                            <div class="content-header mb-3">
+                              <h6 class="mb-0 fs-3 fw-bold"> تفاصيل البنك</h6>
+                              <small class="fs-6">أدخل تفاصيل البنك.</small>
+                            </div>
+                            <div class="row g-3">
+                              <div class="col-md-4">
+                                <label class="form-label" for="name-acount">  أسم صاحب الحساب</label>
+                                <input type="text" id="name-acount" class="form-control" placeholder=" أسم صاحب الحساب " />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="number-acount">    رقم الحساب</label>
+                                <input type="text" id="number-acount" class="form-control" placeholder=" رقم الحساب   " />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="name-bank">     أسم البنك</label>
+                                <input type="text" id="name-bank" class="form-control" placeholder="  أسم البنك   " />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Bank-ID">     كود هوية البنك</label>
+                                <input type="text" id="Bank-ID" class="form-control" placeholder=" كود هوية البنك  " />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Branch-2">مقر الفرع</label>
+                                <select class="select2 " id="Branch-2">
+                                  <option>  اختر الفرع</option>
+                                  <option>French</option>
+                                  <option>Spanish</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label" for="Taxpayer-ID">   رقم هوية دافع الضرائب    </label>
+                                <input type="text" id="Taxpayer-ID" class="form-control" placeholder=" رقم هوية دافع الضرائب " />
+                              </div>
+                              <div class="col-12 d-flex justify-content-between">
+                                <button class="btn btn-label-secondary btn-prev">
+                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button class="btn btn-primary btn-next">
+                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                                  <i class="ti ti-arrow-right"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                           <!-- Escorts-links -->
+                           <div id="Escorts-links" class="content">
+                            <div class="content-header mb-3">
+                              <h6 class="mb-0 fs-3 fw-bold">البيانات المرافقين</h6>
+                              <small class="fs-6">أدخل تفاصيل المرافقين.</small>
+                            </div>
+
+                            <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
+
+                              <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
+                                <thead class="table-light">
+                                  <tr class="fw-bold">
+                                    <th class="fw-bold">م</th>
+                                    <th class="fw-bold"> الاسم بالعربى</th>
+                                    <th class="fw-bold">الاسم بالانجيلزى</th>
+                                    <th class="fw-bold"> تاريخ الميلاد</th>
+                                    <th class="fw-bold"> الصلة</th>
+                                    <th class="fw-bold"> الهاتف</th>
+                                    <th class="fw-bold"> البريد الاكترونى</th>
+                                    <th class="fw-bold"> الجنسية</th>
+                                    <th class="fw-bold"> الجنس</th>
+                                    <th class="fw-bold"> التامين الطبي</th>
+                                    <th class="fw-bold"> عدد تزاكر الطيران</th>
+                                    <th class="fw-bold"> نوع الإثبات</th>
+                                    <th class="fw-bold">  رقم الإثبات</th>
+                                    <th class="fw-bold">  رقم الإقامة</th>
+                                    <th class="fw-bold">   تاريخ نهاية الإقامة</th>
+                                   
+                                    
+                                  </tr>
+                                </thead>
+                                <tbody class="table-border-bottom-0">
+                                  <tr>
+                                    <td></td>
+                                    <td> 
+                                      <input type="text" id="username-1" class="form-control" placeholder="الاسم بالعربى" />
+                                     </td>
+                              
+                                    <td>   
+                                       <input type="text" id="username-e-1" class="form-control" placeholder="الاسم بالانجيلزى" />
+                                    </td>
+                                    <td> 
+                                      <input type="date" id="date-form-5" class="form-control"  />
+                                
+                                    <td>  
+                                      <select class="select2 " id="Relevance-2">
+                                        <option>  اختر الصلة</option>
+                                        <option>اب</option>
+                                        <option>ابن</option>
+                                      </select>
+                                    </td>
+                                    <td>   
+                                       <input type="text" id="phone-number" class="form-control" placeholder="الهاتف " />
+                                    </td>
+                                    <td>
+                                      <input
+                                      type="email"
+                                      id="email-1"
+                                      class="form-control"
+                                      placeholder="john.doe@email.com"
+                                      aria-label="john.doe" />
+                                    </td>
+                                    <td>
+                                      <input type="text" id="Nationality " class="form-control" placeholder=" الجنسية  " />
+
+                                    </td>
+                                    <td>
+                                      <input type="text" id="type-of " class="form-control" placeholder="   الجنس" />
+
+                                    </td>
+                                    <td>
+                                      <input type="text" id="Medical " class="form-control" placeholder="  التامين الطبي" />
+
+                                    </td>
+                                    <td>                    
+                                      
+                                      <input type="text" id="number-tect" class="form-control" placeholder="  عدد تزاكر الطيران" />
+                                    </td>
+                                    <td>                    
+                                      
+                                      <input type="text" id="proof" class="form-control" placeholder=" نوع الإثبات" />
+                                    </td>
+                                    <td>
+                                      <input type="text" id="number-proof" class="form-control" placeholder=" رقم الإثبات" />
+
+                                    </td>
+                                    <td>
+                                      <input type="text" id="number-Residency" class="form-control" placeholder=" رقم الإقامة" />
+
+                                    </td>
+                                    <td>
+                                      <input type="date" id="date-form-6" class="form-control"  />
+                                    </td>
+                                   
+                                    
+                                  </tr>
+                                </tbody>
+                            
+                              </table>
+
+                            </div>
+
+                              <div class="col-12 d-flex justify-content-between mt-2">
+                                <button class="btn btn-label-secondary btn-prev">
+                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button class="btn btn-primary btn-next">
+                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
+                                  <i class="ti ti-arrow-right"></i>
+                                </button>
+                              </div>
+                            </div>
+                      
+                            <!-- file-links -->
+                            <div id="file-links" class="content">
+                              <div class="content-header mb-3">
+                                <h6 class="mb-0 fs-3 fw-bold">المستندات </h6>
+                                <p class="fs-4">
+                                  اضافه الملفات التالية المطلوبه:السيرة الذاتية
+                                  /خطاب العرض
+                                  /خطاب الإنضمام
+                                  /العقد-الإتفاق/إثبات الهوية
+
+
+                                </p>
+                              </div>
+                                <div class="form-repeater pt-2">
+                                  <div data-repeater-list="group-a">
+                                      <div data-repeater-item class="col-lg-12">
+                                        <div class="row mx-0">
+                                          <div class="mb-3 col-12 col-lg-5">
+                                              <label class="form-label" for="inputFile01">اضافه ملف <span class="start-form">*</span></label>
+                                              <input type="file" class="form-control" id="inputFile01">
+                                           
+                                          </div>
+                                          <div class="mb-3 col-lg-5 col-12">
+                                            <label class="form-label" for="form-repeater-name">   الاسم<span class="start-form">*</span></label>
+                                            <input type="text" id="form-repeater-name" class="form-control" placeholder="اسم الملف" />
+                                          </div>
+                                          <div class="mb-3 col-lg-2  col-12 d-flex align-items-center mb-0">
+                                            <button class="btn btn-label-danger mt-4" data-repeater-delete>
+                                              <i class="ti ti-x ti-xs me-1"></i>
+                                              <span class="align-middle">Delete</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <hr />
+      
+                                      </div>
+                                      <div class="mb-3">
+                                        <button class="btn btn-primary" data-repeater-create type="button">
+                                          <i class="ti ti-plus me-1"></i>
+                                          <span class="align-middle">Add New</span>
+                                        </button>
+                                      </div>
+                                  </div>
+                                 
+                                </div>
+                                <div class="col-12 d-flex justify-content-between">
+                                
+                                  <button class="btn btn-label-secondary btn-prev">
+                                    <i class="ti ti-arrow-left me-sm-1 me-0"></i>
+                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                  </button>
+                                  <div>
+                                    <button class="btn btn-primary btn-submit">تعديل</button>
+                                  </div>
+                                </div>
+                             
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <!---->
+                  </div>
+              </div>
+            </div>
+
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
@@ -1077,7 +1495,11 @@
     <script src="./assets/vendor/libs/select2/select2.js"></script>
     <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
     <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
-    
+    <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
+
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
@@ -1092,5 +1514,24 @@
      <script src="./assets/js/dashboards-crm.js"></script>
      <script src="./assets/vendor/js/accordion.js"></script>
      <script src="./assets/js/forms-extras.js"></script>
+     <script src="./assets/js/form-wizard-numbered.js"></script>
+     <script>
+      /**********profil-img********** */
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+              $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+              $('#imagePreview').hide();
+              $('#imagePreview').fadeIn(650);
+          }
+          reader.readAsDataURL(input.files[0]);
+      }
+    }
+    $("#imageUpload").change(function() {
+      readURL(this);
+    });
+    </script>
+   
   </body>
 </html>
