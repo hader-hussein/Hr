@@ -18369,7 +18369,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
   box-shadow: 0 0.625rem 1.25rem rgba(165, 163, 174, 0.4);
 }
 .menu-horizontal .menu-sub .menu-item {
-  padding: 0.125rem 0.5rem;
+  padding: 0.125rem 0.0rem;
 }
 .menu-horizontal .menu-sub .menu-item.open .menu-link > div::after {
   position: absolute;
@@ -18390,8 +18390,8 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
   left: -100%;
 }
 .menu-horizontal .menu-sub .menu-link {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   border-radius: 0.375rem;
 }
 .menu-horizontal .menu-inner > .menu-item .menu-sub {

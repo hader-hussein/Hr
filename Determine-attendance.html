@@ -617,7 +617,7 @@
                   </li>
                   
                   <!-- Personnel -->
-                  <li class="menu-item active">
+                  <li class="menu-item">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
                      
                       <i class="menu-icon tf-icons fa-solid fa-briefcase"></i>
@@ -675,7 +675,7 @@
                         </a>
                         
                       </li>
-                      <li class="menu-item active">
+                      <li class="menu-item">
                         <a href="view-Social-insurance.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-file"></i>
                           <div data-i18n="Social insurance">تأمين إجتماعي</div>
@@ -690,7 +690,7 @@
                       
                       </li>
 
-                      <li class="menu-item">
+                      <li class="menu-item ">
                         <a href="view-tickets.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-ticket"></i>
                           <div data-i18n="tickets"> التذاكر</div>
@@ -714,21 +714,21 @@
                     </ul>
                   </li>
                  <!--money-->
-                 <li class="menu-item">
+                 <li class="menu-item active">
                   <a href="javascript:void(0)" class="menu-link menu-toggle">
                     <i class="menu-icon fa-solid fa-users-gear"></i>
                     <div data-i18n="audience">الحضور   </div>
                   </a>
                   <ul class="menu-sub">
                    
-                    <li class="menu-item ">
+                    <li class="menu-item active">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon fa-solid fa-check"></i>
                      
                         <div data-i18n="audience"> الحضور</div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item ">
+                        <li class="menu-item active">
                           <a href="Determine-attendance.html" class="menu-link">
                             <div data-i18n="Determine attendance"> تحديد الحضور </div>
                           </a>
@@ -874,72 +874,70 @@
            
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
-                <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">  التأمين الإجتماعي</span>  </strong>
-                  <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
-                    <!--item-->
-                      <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
-                            
-                            <div class="card h-100">
-                              <div class="row h-100">
-                                <div class="col-sm-5 col-12">
-                                  <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
-                                    <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
-                                  </div>
-                                </div>
-                                <div class="col-sm-7 col-12">
-                                  <div class="card-body text-sm-end text-center ps-sm-0">
-                                    <button data-bs-target="#addtruck" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                  اضافة  
-                                    </button>
-                                    <p class="mb-0 mt-1">Add Social-insurance data , if it does not exist</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        
-                      </div>
-                    <!--item-->
-                      
-                  </div>
+                <div class="card-body py-4 px-md-4 px-2 card-widget-separator">
+                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">   تحديد الحضور</span>  </strong>
+                
                 </div>
               </div>
                 <div class="card comonent-hader-top p-2 mt-4">
                    <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
                    
-
+                    <form class="row component-form g-3 mx-0 mb-2">
+                      <div class="col-md-6">
+                        <label class="form-label" for="date-serch"> بحث بتاريخ:</label>
+                        <input type="date" class="form-control">
+                      </div>
+                    
+                    </form>
                     <div class="card-datatable text-nowrap  table-responsive pt-0">
-                        
+                      
                       <table class=" table table-bordered table-hover rounded">
                         <thead class="table-light">
                           <tr>
                          
                             <th>م</th>
-                            <th>      أسم الموظف</th>
-                            <th>   نوع التأمين الإجتماعي</th>
+                            <th>      الاسم</th>
+                            <th>       الحالة</th>
+                            <th>      الحضور</th>
                             
-                            <th>أسم شركة التأمين</th>
+                            <th>   وقت تسجيل الحضور/ الانصراف	</th>
                            
-                            <th>المبلغ</th>
-                            <th>تاريخ البداية</th>
-                            <th> تاريخ النهاية</th>
-                            <th>الاجراءت</th>
+                         
+                        
+                            <th>حفظ</th>
                           </tr>
                         </thead>
                         <tbody>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              
+                              <td>1</td>
+                              <td>
+                                فيصل نواز محمد شريف
+                              </td>
+                              <td>
+                                <div class="form-check form-switch">
+                                  <div class="d-flex my-switch">
+                                    <div class="form-text text-1">غياب</div>
+                    
+                                    <div class="form-check form-switch form-check-inline mx-2">
+                                      <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
+                                    </div>
+                    
+                                    <div class="form-text text-2">حضور</div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <input type="time" class="form-control" id="clock_in1605" name="clock_in[]" value="8:00 AM">
+                              </td>
+                              <td>
+                                <input type="time" class="form-control" id="clock_in1605" name="clock_in[]" value="8:00 AM">
+                              </td>
+                          
                               <td>
                                 <div class="d-flex justify-content-center">
                                 
                                   <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-branches" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
-                                  <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
                                 
                                 </div>
                               </td>
@@ -951,159 +949,10 @@
                    </div>
                 </div>
             </div>
-          <!-- Add Hardware Modal -->
-          <div class="modal fade" id="addtruck"  tabindex="-1" aria-modal="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">      اضافة التأمين الإجتماعي</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="start-date">   تاريخ البداية</label>
-                      <input type="date" id="start-date" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="end-date">   تاريخ النهاية</label>
-                      <input type="date" id="end-date" class="form-control" placeholder=" تاريخ النهاية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Employee">  الموظف </label>
-                      <select class="select2" id="name-Employee">
-                        <option label=" ">الكل</option>
-                        <option>احمد</option>
-                        <option>ابراهيم</option>
-                  
-                      </select>                  
-                    
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-type">   نوع التأمين الإجتماعي</label>
-                      <input type="text" id="name-type" class="form-control" placeholder=" نوع التأمين الإجتماعي  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Insurance ">     شركة التأمين</label>
-                      <input type="text" id="name-Insurance " class="form-control" placeholder="  شركة التأمين   " />
-                    </div>
-                   
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-amount ">      المبلغ</label>
-                      <input type="text" id="name-amount " class="form-control" placeholder="   المبلغ   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Medical ">      درجة التأمين الطبي</label>
-                      <input type="text" id="name-Medical " class="form-control" placeholder="   درجة التأمين الطبي   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="number-members ">        عدد أفراد العائلة</label>
-                      <input type="text" id="number-members " class="form-control" placeholder="     عدد أفراد العائلة   " />
-                    </div> 
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="date-date">   تاريخ </label>
-                      <input type="date" id="date-date" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>          
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-                 
-              
-              </div>
-            </div>
-          </div>
-          </div>
+       
           <!---->
-          <!--edit-->
-          <div class="modal fade" id="edit-branches" tabindex="-1" aria-modal="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    تعديل التامين الاجتماعى</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="start-date-1">   تاريخ البداية</label>
-                      <input type="date" id="start-date-1" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="end-date-1">   تاريخ النهاية</label>
-                      <input type="date" id="end-date-1" class="form-control" placeholder=" تاريخ النهاية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Employee-1">  الموظف </label>
-                      <select class="select2" id="name-Employee-1">
-                        <option label=" ">الكل</option>
-                        <option>احمد</option>
-                        <option>ابراهيم</option>
-                  
-                      </select>                  
-                    
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-type-1">   نوع التأمين الإجتماعي</label>
-                      <input type="text" id="name-type-1" class="form-control" placeholder=" نوع التأمين الإجتماعي  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Insurance-1 ">     شركة التأمين</label>
-                      <input type="text" id="name-Insurance-1 " class="form-control" placeholder="  شركة التأمين   " />
-                    </div>
-                   
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-amount-1 ">      المبلغ</label>
-                      <input type="text" id="name-amount-1 " class="form-control" placeholder="   المبلغ   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Medical-1 ">      درجة التأمين الطبي</label>
-                      <input type="text" id="name-Medical-1 " class="form-control" placeholder="   درجة التأمين الطبي   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="number-members-1 ">        عدد أفراد العائلة</label>
-                      <input type="text" id="number-members-1 " class="form-control" placeholder="     عدد أفراد العائلة   " />
-                    </div> 
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="date-date-1">   تاريخ </label>
-                      <input type="date" id="date-date-1" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>          
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
-
-                    </div>
-                  </form>
-                 
-              
-              </div>
-            </div>
-          </div>
-          </div>
-            <!-- delet Modal -->
-            <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
-              <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
-                <div class="modal-content p-1 p-md-3">
-                  <button
-                    type="button"
-                    class="btn-close btn-pinned"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                  <div class="modal-body text-center">
-                      <h3 class="role-title mb-2 fs-5">
-                        هل انت متاكد من حذف العنصر؟
-                      </h3>
-                    
-                    <div class="col-11 col-lg-12 mb-3">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
-                      <button  type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
-                    </div>
-                  
-                
-                  </div>
-                </div>
-              </div>
-            </div>
+        
+          
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">

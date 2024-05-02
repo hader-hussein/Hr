@@ -640,14 +640,14 @@
                         </a>
                        
                       </li>
-                      <li class="menu-item">
+                      <li class="menu-item ">
                         <a href="view-Requests.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-settings"></i>
                           <div data-i18n="Requests"> الطلبات</div>
                         </a>
                      
                       </li>
-                      <li class="menu-item">
+                      <li class="menu-item ">
                         <a href="view-workResuming.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-settings"></i>
                           <div data-i18n="workResumingRequests"> طلبات مباشرة العمل</div>
@@ -661,21 +661,21 @@
                         </a>
                      </li>
                       
-                      <li class="menu-item">
+                      <li class="menu-item ">
                         <a href="view-Salary-revealed.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-file"></i>
                           <div data-i18n="Salary revealed"> كشف المرتبات</div>
                         </a>
                         
                       </li>
-                      <li class="menu-item ">
+                      <li class="menu-item">
                         <a href="view-SNotifications.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-bell "></i>
                           <div data-i18n="Notifications">الإشعارات</div>
                         </a>
                         
                       </li>
-                      <li class="menu-item active">
+                      <li class="menu-item">
                         <a href="view-Social-insurance.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-file"></i>
                           <div data-i18n="Social insurance">تأمين إجتماعي</div>
@@ -704,7 +704,7 @@
                         </a>
                        
                       </li>
-                      <li class="menu-item">
+                      <li class="menu-item active">
                         <a href="view-Liquidation.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-file"></i>
                           <div data-i18n="Liquidation"> التصفية</div>
@@ -875,7 +875,7 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
                 <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">  التأمين الإجتماعي</span>  </strong>
+                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">    التصفية</span>  </strong>
                   <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
                     <!--item-->
                       <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
@@ -890,9 +890,9 @@
                                 <div class="col-sm-7 col-12">
                                   <div class="card-body text-sm-end text-center ps-sm-0">
                                     <button data-bs-target="#addtruck" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                  اضافة  
+                                       تسجيل تصفية
                                     </button>
-                                    <p class="mb-0 mt-1">Add Social-insurance data , if it does not exist</p>
+                                    <p class="mb-0 mt-1">Add Liquidation data , if it does not exist</p>
                                   </div>
                                 </div>
                               </div>
@@ -915,14 +915,13 @@
                           <tr>
                          
                             <th>م</th>
-                            <th>      أسم الموظف</th>
-                            <th>   نوع التأمين الإجتماعي</th>
-                            
-                            <th>أسم شركة التأمين</th>
-                           
-                            <th>المبلغ</th>
-                            <th>تاريخ البداية</th>
-                            <th> تاريخ النهاية</th>
+                          
+                          
+                            <th>  رقم هوية الموظف</th>
+                            <th>الأسم </th>
+                            <th>  وقت بداية الخدمة</th>
+                            <th> تاريخ التصفية </th>
+                            <th> عدد أيام العمل </th>
                             <th>الاجراءت</th>
                           </tr>
                         </thead>
@@ -934,10 +933,10 @@
                               <td></td>
                               <td></td>
                               <td></td>
-                              <td></td>
                               <td>
                                 <div class="d-flex justify-content-center">
                                 
+                                  <a class="bg-secondary text-white p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#view-salary" data-bs-toggle="modal" title="مشاهدة"><i class="ti ti-eye  fs-4"></i> </a>
                                   <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-branches" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
                                   <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
                                 
@@ -951,134 +950,484 @@
                    </div>
                 </div>
             </div>
-          <!-- Add Hardware Modal -->
-          <div class="modal fade" id="addtruck"  tabindex="-1" aria-modal="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">      اضافة التأمين الإجتماعي</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="start-date">   تاريخ البداية</label>
-                      <input type="date" id="start-date" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="end-date">   تاريخ النهاية</label>
-                      <input type="date" id="end-date" class="form-control" placeholder=" تاريخ النهاية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Employee">  الموظف </label>
-                      <select class="select2" id="name-Employee">
-                        <option label=" ">الكل</option>
-                        <option>احمد</option>
-                        <option>ابراهيم</option>
-                  
-                      </select>                  
-                    
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-type">   نوع التأمين الإجتماعي</label>
-                      <input type="text" id="name-type" class="form-control" placeholder=" نوع التأمين الإجتماعي  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Insurance ">     شركة التأمين</label>
-                      <input type="text" id="name-Insurance " class="form-control" placeholder="  شركة التأمين   " />
-                    </div>
-                   
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-amount ">      المبلغ</label>
-                      <input type="text" id="name-amount " class="form-control" placeholder="   المبلغ   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Medical ">      درجة التأمين الطبي</label>
-                      <input type="text" id="name-Medical " class="form-control" placeholder="   درجة التأمين الطبي   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="number-members ">        عدد أفراد العائلة</label>
-                      <input type="text" id="number-members " class="form-control" placeholder="     عدد أفراد العائلة   " />
-                    </div> 
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="date-date">   تاريخ </label>
-                      <input type="date" id="date-date" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>          
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+            <!--add-selery-->
+          <div class="modal fade" id="addtruck" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-add-new-role">
+              <div class="modal-content p-1 p-md-3">
+                <h1 class="modal-title fs-5 fw-bold text-tilte-b"> تسجيل تصفية</h1>
 
-                    </div>
-                  </form>
-                 
-              
+                <button
+                  type="button"class="btn-close btn-pinned"data-bs-dismiss="modal"aria-label="Close"></button>
+                <div class="modal-body">
+                
+                    <form class="row component-form g-3 mx-0 align-items-center">
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="name-Employee-1">  الموظف </label>
+                        <select class="select2" id="name-Employee-1">
+                          <option label=" ">الكل</option>
+                          <option>احمد</option>
+                          <option>ابراهيم</option>
+                    
+                        </select>                  
+                      
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-balance">    رصيد الاجازات</label>
+                        <input type="text" id="end-balance" class="form-control" placeholder=" رصيد الاجازات  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-compensation">تعويض  مدة العقد</label>
+                        <input type="text" id="end-compensation" class="form-control" placeholder="تعويض مدة العقد  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-tickets">تذاكر السفر</label>
+                        <input type="text" id="end-tickets" class="form-control" placeholder="تذاكر السفر  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Number">عدد ايام العمل</label>
+                        <input type="text" id="end-Number" class="form-control" placeholder="عدد ايام العمل  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Liquidation-date"> تاريخ التصفية</label>
+                        <input type="date" id="Liquidation-date" class="form-control"  />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Reason">سبب التصفية</label>
+                        <input type="text" id="end-Reason" class="form-control" placeholder="سبب التصفية " />
+                      </div>
+
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-period">        فترة الخدمة المخصومة(ايام)</label>
+                        <input type="text" id="end-period" class="form-control" placeholder="فترة الخدمة المخصومة " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="payment-method">  طريقة الدفع</label>
+                        <input type="text" id="payment-method" class="form-control" placeholder="طريقه الدفع " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="End-service">        مكافاه نهاية الخدمة</label>
+                        <input type="text" id="End-service" class="form-control" placeholder=" مكافاه نهاية الخدمة " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Commissions">  العمولات </label>
+                        <input type="text" id="Commissions" class="form-control" placeholder=" العمولات " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Extra-pay">  اجر اضافى</label>
+                        <input type="text" id="Extra-pay" class="form-control" placeholder=" اجر اضافى " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Settlement"> التسوية</label>
+                        <input type="text" id="Settlement" class="form-control" placeholder=" التسوية " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Alarm">تعويض شهر الانذار</label>
+                        <input type="text" id="end-Alarm" class="form-control" placeholder=" تعويض شهر الانذار " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Delay"> خصم  التاخير</label>
+                        <input type="text" id="end-Delay" class="form-control" placeholder=" خصم التاخير " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Absence"> خصم الغياب</label>
+                        <input type="text" id="end-Absence" class="form-control" placeholder=" خصم الغياب " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Insurances"> خصم التامينات الاجتماعية</label>
+                        <input type="text" id="end-Insurances" class="form-control" placeholder="  خصم التامينات الاجتماعية " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-market">  مديونيه السوق</label>
+                        <input type="text" id="end-market" class="form-control" placeholder="  مديونيه السوق " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Custody">   عهدة</label>
+                        <input type="text" id="end-Custody" class="form-control" placeholder="  عهدة " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-selery-1">   ذمم</label>
+                        <input type="text" id="end-selery-1" class="form-control" placeholder=" ذمم  " />
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label" for="commit-Swear">   الملاحظات </label>
+                        <textarea type="text" id="commit-Swear" class="form-control" placeholder="  الملاحظات   " rows="2"></textarea>
+                      </div>
+                      <div class="pt-2">
+                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+  
+                      </div>
+                    </form>
+                </div>
               </div>
             </div>
           </div>
-          </div>
-          <!---->
           <!--edit-->
-          <div class="modal fade" id="edit-branches" tabindex="-1" aria-modal="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    تعديل التامين الاجتماعى</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form g-3 mx-0">
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="start-date-1">   تاريخ البداية</label>
-                      <input type="date" id="start-date-1" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="end-date-1">   تاريخ النهاية</label>
-                      <input type="date" id="end-date-1" class="form-control" placeholder=" تاريخ النهاية  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Employee-1">  الموظف </label>
-                      <select class="select2" id="name-Employee-1">
-                        <option label=" ">الكل</option>
-                        <option>احمد</option>
-                        <option>ابراهيم</option>
-                  
-                      </select>                  
-                    
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-type-1">   نوع التأمين الإجتماعي</label>
-                      <input type="text" id="name-type-1" class="form-control" placeholder=" نوع التأمين الإجتماعي  " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Insurance-1 ">     شركة التأمين</label>
-                      <input type="text" id="name-Insurance-1 " class="form-control" placeholder="  شركة التأمين   " />
-                    </div>
-                   
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-amount-1 ">      المبلغ</label>
-                      <input type="text" id="name-amount-1 " class="form-control" placeholder="   المبلغ   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="name-Medical-1 ">      درجة التأمين الطبي</label>
-                      <input type="text" id="name-Medical-1 " class="form-control" placeholder="   درجة التأمين الطبي   " />
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="number-members-1 ">        عدد أفراد العائلة</label>
-                      <input type="text" id="number-members-1 " class="form-control" placeholder="     عدد أفراد العائلة   " />
-                    </div> 
-                    <div class="col-lg-4 col-md-6">
-                      <label class="form-label" for="date-date-1">   تاريخ </label>
-                      <input type="date" id="date-date-1" class="form-control" placeholder=" تاريخ البداية  " />
-                    </div>          
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
+          <div class="modal fade" id="edit-branches" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-add-new-role">
+              <div class="modal-content p-1 p-md-3">
+                <h1 class="modal-title fs-5 fw-bold text-tilte-b"> تعديل تصفية</h1>
 
-                    </div>
-                  </form>
-                 
-              
+                <button
+                  type="button"class="btn-close btn-pinned"data-bs-dismiss="modal"aria-label="Close"></button>
+                <div class="modal-body">
+                
+                    <form class="row component-form g-3 mx-0 align-items-center">
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="name-Employee">  الموظف </label>
+                        <select class="select2" id="name-Employee">
+                          <option label=" ">الكل</option>
+                          <option>احمد</option>
+                          <option>ابراهيم</option>
+                    
+                        </select>                  
+                      
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-balance-1">    رصيد الاجازات</label>
+                        <input type="text" id="end-balance-1" class="form-control" placeholder=" رصيد الاجازات  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-compensation-1">تعويض  مدة العقد</label>
+                        <input type="text" id="end-compensation-1" class="form-control" placeholder="تعويض مدة العقد  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-tickets-1">تذاكر السفر</label>
+                        <input type="text" id="end-tickets-1" class="form-control" placeholder="تذاكر السفر  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Number-1">عدد ايام العمل</label>
+                        <input type="text" id="end-Number-1" class="form-control" placeholder="عدد ايام العمل  " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Liquidation-date-1"> تاريخ التصفية</label>
+                        <input type="date" id="Liquidation-date-1" class="form-control"  />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Reason-1">سبب التصفية</label>
+                        <input type="text" id="end-Reason-1" class="form-control" placeholder="سبب التصفية " />
+                      </div>
+
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-period-1">        فترة الخدمة المخصومة(ايام)</label>
+                        <input type="text" id="end-period-1" class="form-control" placeholder="فترة الخدمة المخصومة " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="payment-method-1">  طريقة الدفع</label>
+                        <input type="text" id="payment-method-1" class="form-control" placeholder="طريقه الدفع " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="End-service-1">        مكافاه نهاية الخدمة</label>
+                        <input type="text" id="End-service-1" class="form-control" placeholder=" مكافاه نهاية الخدمة " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Commissions-1">  العمولات </label>
+                        <input type="text" id="Commissions-1" class="form-control" placeholder=" العمولات " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Extra-pay-1">  اجر اضافى</label>
+                        <input type="text" id="Extra-pay-1" class="form-control" placeholder=" اجر اضافى " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="Settlement-1"> التسوية</label>
+                        <input type="text" id="Settlement-1" class="form-control" placeholder=" التسوية " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Alarm-1">تعويض شهر الانذار</label>
+                        <input type="text" id="end-Alarm-1" class="form-control" placeholder=" تعويض شهر الانذار " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Delay-1"> خصم  التاخير</label>
+                        <input type="text" id="end-Delay-1" class="form-control" placeholder=" خصم التاخير " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Absence-1"> خصم الغياب</label>
+                        <input type="text" id="end-Absence-1" class="form-control" placeholder=" خصم الغياب " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Insurances-1"> خصم التامينات الاجتماعية</label>
+                        <input type="text" id="end-Insurances-1" class="form-control" placeholder="  خصم التامينات الاجتماعية " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-market-1">  مديونيه السوق</label>
+                        <input type="text" id="end-market-1" class="form-control" placeholder="  مديونيه السوق " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-Custody-1">   عهدة</label>
+                        <input type="text" id="end-Custody-1" class="form-control" placeholder="  عهدة " />
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <label class="form-label" for="end-selery">   ذمم</label>
+                        <input type="text" id="end-selery" class="form-control" placeholder=" ذمم  " />
+                      </div>
+                      <div class="col-md-12">
+                        <label class="form-label" for="commit-Swear-1">   الملاحظات </label>
+                        <textarea type="text" id="commit-Swear-1" class="form-control" placeholder="  الملاحظات   " rows="2"></textarea>
+                      </div>
+                      <div class="pt-2">
+                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+  
+                      </div>
+                    </form>
+                </div>
               </div>
             </div>
           </div>
+          <!--view-selery-->
+          <div class="modal fade" id="view-salary" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-add-new-role">
+              <div class="modal-content p-1 p-md-3">
+                <h1 class="modal-title fs-5 fw-bold text-tilte-b">     إظهار كشف التصفية
+                </h1>
+
+                <button
+                  type="button"class="btn-close btn-pinned"data-bs-dismiss="modal"aria-label="Close"></button>
+                <div class="modal-body">
+                  <div class="card invoice-preview-card">
+                    <div class="card-body">
+                      <h4 class="fw-bold fs-4">معلومات الموظف</h4>
+                      <hr class="my-0" />
+                      <div class="table-responsive border-top">
+                        <table class="table m-0 text-center table-bordered">
+                        
+                          <tbody>
+                            <tr>
+                              <td >أسم الموظف</td>
+                              <td>مصطفى نادى شعبان عبداللطيف</td>
+                              <td>رقم الموظف</td>
+                              <td>N-0048</td>
+                            
+                            </tr>
+                            <tr>
+                              <td > رقم هوية الموظف</td>
+                              <td>   2240110284</td>
+                              <td> الجنسية</td>
+                              <td>مصري</td>
+                            
+                            </tr>
+                            <tr>
+                              <td > الوظيفة</td>
+                              <td>   امين مستودع</td>
+                              <td> شركة الكفالة	</td>
+                              <td>شركة نادرين التجاريه المحدوده
+                              </td>
+                            
+                            </tr>
+                            <tr>
+                              <td > وقت بداية الخدمة</td>
+                              <td>   2012-02-11</td>
+                              <td> وقت نهاية الخدمة</td>
+                              <td>2021-01-10</td>
+                            
+                            </tr>
+                            <tr>
+                              <td > إجمالي فترة الخدمة</td>
+                              <td colspan="3">3256</td>
+                            </tr>
+                            <tr>
+                              <td > وقت بداية الخدمة</td>
+                              <td>   2012-02-11</td>
+                              <td> وقت نهاية الخدمة</td>
+                              <td>2021-01-10</td>
+                            
+                            </tr>
+                            <tr>
+                              <td >   فترة الخدمة المخصومة</td>
+                              <td> 0</td>
+                              <td>صافي مدة الخدمة</td>
+                              <td>3256</td>
+                            
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    
+                      <hr class="my-0" />
+                      <h4 class="fw-bold fs-4 pt-4">  الاستحقاقات	</h4>
+
+                      <div class="table-responsive border-top">
+                        <table class="table m-0 text-center table-bordered">
+                          <thead class="table-light">
+                            <tr>
+                              <th>البيان</th>
+                              <th> المبلغ الأساسي	</th>
+                              <th> المبلغ المستحق (0)</th>
+                              <th>   بدل الإجازات (0)</th>
+                              <th>الإجمالي</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>المرتب البدائي</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td> بدلات أخرى</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td> تذاكر السفر	</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td> العمولات</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td> أجر إضافي</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>  التسوية</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>  تعويض مدة العقد</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>  الإجمالي</td>
+                              <td class="text-nowrap">4175	</td>
+                              <td>$32</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                         
+                          </tbody>
+                        </table>
+                      </div>
+                      <hr class="my-0" />
+                      <h4 class="fw-bold fs-4 pt-4">   الخصومات</h4>
+
+                      <div class="table-responsive border-top">
+                        <table class="table m-0 text-center table-bordered">
+
+                
+                          <tbody>
+                                                
+                            <tr>
+                              <td> خصم التأخير</td>
+                               <td> 0</td>
+                            
+                            </tr>
+                            <tr>
+                              <td>خصم الغياب  </td>
+                              <td>100  </td>
+
+                            </tr>
+                            <tr>
+                              <td> ذمم  </td>
+                              <td>100  </td>
+
+                            </tr>
+                            <tr>
+                              <td> عهدة  </td>
+                              <td>100  </td>
+
+                            </tr>
+                            <tr>
+                              <td> مديونية في السوق  </td>
+                              <td>100  </td>
+
+                            </tr>
+                            <tr>
+                              <td> تعويض شهر الإنذار  </td>
+                              <td>100  </td>
+
+                            </tr>
+                            <tr>
+                              <td>   خصم التأمينات الإجتماعية  </td>
+                              <td>100  </td>
+
+                            </tr>
+                            <tr>
+                              <td>     الإجمالي  </td>
+                              <td>100  </td>
+
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <hr class="my-0" />
+                      <h4 class="fw-bold fs-4 pt-4">   مكافأة </h4>
+
+                      <div class="table-responsive border-top">
+                        <table class="table m-0 text-center table-bordered">
+
+                
+                          <tbody>
+                                                
+                            <tr>
+                              <td>  مكافأة نهاية الخدمة</td>
+                               <td> 0</td>
+                            
+                            </tr>
+                            <tr>
+                              <td> المبلغ المستحق	  </td>
+                              <td>100  </td>
+
+                            </tr>
+                        
+                   
+                          </tbody>
+                        </table>
+                      </div>
+                      <hr class="my-0" />
+                      <h4 class="fw-bold fs-4 pt-4">   الملاحظات </h4>
+                      <p>يتم صرف رصيد اجازات عن 3 ايام فقط + يستحق الموظف مكافئة نهاية الخدمة بمبلغ 28714.58 ريال
+
+                      </p>
+                      <div class="table-responsive border-top">
+                        <table class="table m-0 text-center table-bordered">
+                        <thead class="table-light">
+                           <tr>
+                            <th>محاسب الرواتب	</th>
+                            <th>مدير إدارة الموارد البشرية	</th>
+                            <th>المحاسب</th>
+                            <th>المدير المالي	</th>
+                            <th>اعتماد الإدارة</th>
+                           </tr>
+                        </thead>
+                
+                          <tbody>
+                                                
+                            <tr >
+                              <td style="height: 50px;">  </td>
+                               <td></td>
+                               <td>  </td>
+                               <td> </td>
+                               <td> </td>
+                            </tr>
+                        
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+            </div>
           </div>
             <!-- delet Modal -->
             <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
@@ -1208,5 +1557,6 @@
      <script src="./assets/js/dashboards-crm.js"></script>
      <script src="./assets/vendor/js/accordion.js"></script>
      <script src="./assets/js/forms-extras.js"></script>
+    
   </body>
 </html>
