@@ -617,7 +617,7 @@
                   </li>
                   
                   <!-- Personnel -->
-                  <li class="menu-item">
+                  <li class="menu-item ">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
                      
                       <i class="menu-icon tf-icons fa-solid fa-briefcase"></i>
@@ -668,7 +668,7 @@
                         </a>
                         
                       </li>
-                      <li class="menu-item ">
+                      <li class="menu-item">
                         <a href="view-SNotifications.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-bell "></i>
                           <div data-i18n="Notifications">الإشعارات</div>
@@ -690,7 +690,7 @@
                       
                       </li>
 
-                      <li class="menu-item ">
+                      <li class="menu-item">
                         <a href="view-tickets.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-ticket"></i>
                           <div data-i18n="tickets"> التذاكر</div>
@@ -721,14 +721,14 @@
                   </a>
                   <ul class="menu-sub">
                    
-                    <li class="menu-item active">
+                    <li class="menu-item ">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon fa-solid fa-check"></i>
                      
                         <div data-i18n="audience"> الحضور</div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item active">
+                        <li class="menu-item ">
                           <a href="Determine-attendance.html" class="menu-link">
                             <div data-i18n="Determine attendance"> تحديد الحضور </div>
                           </a>
@@ -748,13 +748,13 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="menu-item ">
+                    <li class="menu-item active">
                       <a href="javascript:void(0)" class="menu-link menu-toggle">
                         <i class="menu-icon fa-solid  fa-rocket"></i>
                         <div data-i18n="Vacations"> الإجازات</div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item ">
+                        <li class="menu-item active">
                           <a href="Types-of-leave.html" class="menu-link">
                             <div data-i18n="Types-of-leave"> أنواع الإجازات</div>
                           </a>
@@ -874,111 +874,200 @@
            
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
-                <div class="card-body py-4 px-md-4 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">   تحديد الحضور</span>  </strong>
-                
+                <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
+                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> أنواع الإجازات</span>  </strong>
+                  <div class="row justify-content-center mx-0  py-3 px-md-3 px-2">
+                    <!--item-->
+                      <div class="col-xl-6 col-lg-6 col-md-6 mb-md-0 mb-2">
+                            
+                            <div class="card h-100">
+                              <div class="row h-100">
+                                <div class="col-sm-5 col-12">
+                                  <div class="d-flex align-items-center h-100 justify-content-center mt-sm-0">
+                                    <img src="./assets/img/illustrations/add.png" class="img-fluid mt-sm-4 mt-md-0" alt="add-new-roles" width="83">
+                                  </div>
+                                </div>
+                                <div class="col-sm-7 col-12">
+                                  <div class="card-body text-sm-end text-center ps-sm-0">
+                                    <button data-bs-target="#addtruck" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
+                                  اضافة  اجازة جديده
+                                    </button>
+                                    <p class="mb-0 mt-1">Add Types-of-leave data , if it does not exist</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        
+                      </div>
+                    <!--item-->
+                      
+                  </div>
                 </div>
               </div>
                 <div class="card comonent-hader-top p-2 mt-4">
                    <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
                    
-                    <form class="row component-form g-3 mx-0 mb-2">
-                      <div class="col-md-6">
-                        <label class="form-label" for="date-serch"> بحث بتاريخ:</label>
-                        <input type="date" class="form-control">
-                      </div>
-                    
-                 
+
                     <div class="card-datatable text-nowrap  table-responsive pt-0">
-                      
-                      <table class=" table table-bordered table-hover rounded text-center">
+                        
+                      <table class=" table table-bordered table-hover rounded">
                         <thead class="table-light">
                           <tr>
                          
                             <th>م</th>
-                            <th>      الاسم</th>
-                            <th>       الحالة</th>
-                            <th>      الحضور</th>
-                            
-                            <th>   وقت تسجيل الحضور/ الانصراف	</th>
+                            <th>      اجازة</th>
+                            <th> عدد الاجازات </th>
+                            <th>الحالة</th>
+                            <th>اجراء</th>
                            
-                            <th>      متأخر</th>
-                        
-                            <th>حفظ</th>
                           </tr>
                         </thead>
                         <tbody>
                             <tr>
-                              
                               <td>1</td>
+                              <td>اجازة اليوم الوطنى</td>
+                              <td>0</td>
+                              <td>paid</td>
                               <td>
-                                فيصل نواز محمد شريف
-                              </td>
-                              <td>
-                                <div class="form-check form-switch">
-                                  <div class="d-flex my-switch">
-                                    <div class="form-text text-1">غياب</div>
-                    
-                                    <div class="form-check form-switch form-check-inline mx-2">
-                                      <input id="revenue" class="form-check-input form-check-inline" type="checkbox" checked="true">
-                                    </div>
-                    
-                                    <div class="form-text text-2">حضور</div>
-                                  </div>
-                                  <div id="menu2">
-                                    <label class="form-label" for="reason"> السبب</label>
-                                    <input type="text" class="form-control" id="reason" placeholder="سبب الغياب">
-
-                                  </div>
-                                </div>
-                              </td>
-                              <td>
-                                غير محدد
-                              </td>
-                              <td>
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                      <label class="form-label" for="clock_in">تسجيل حضور</label>
-                                      <input type="time" class="form-control" id="clock_in" name="clock_in[]" value="8:00 AM">
-
-                                    </div>
-                                    <div>
-                                      <label class="form-label" for="clock_in1605">تسجيل انصراف</label>
-
-                                      <input type="time" class="form-control" id="clock_in1605" name="clock_in[]" value="8:00 pM">
-
-                                    </div>
-                                </div>
-
-                              </td>
-                            <td>
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-
-                            </td>
-                              <td>
-                                <div class="d-flex justify-content-center align-items-center">
+                                <div class="d-flex justify-content-center">
                                 
-                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center  rounded cursor-pointer" data-bs-target="#edit-branches" data-bs-toggle="modal" title="حفظ"><i class="ti ti-check  fs-4"></i> </a>
+                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-branches" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
+                                  <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
                                 
                                 </div>
                               </td>
+                       
+                              
                             </tr>
                             
                         </tbody>
                       </table>
                     </div>
+                   </div>
+                </div>
+            </div>
+          <!-- Add Hardware Modal -->
+          <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+              <div class="modal-content p-3 ">
+                <div class="modal-header px-0">
+                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    اضافة نوع الاجازات</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-0">
+                  <form class="row component-form g-3 mx-0">
+                    <div class="col-md-6 col-lg-12">
+                      <label class="form-label" for="Holiday-types">  نوع الاجازة</label>
+                      <input type="text" id="Holiday-types" class="form-control" placeholder=" نوع الاجازة " />
+                    </div>
+   
+                    <div class="col-md-6 col-lg-12">
+                      <label class="form-label" for="condition-Holiday">  الحالة</label>
+                      <select class="select2" id="condition-Holiday">
+                        <option label=" ">مدفوعه</option>
+                        <option>غير مدفوعة</option>
+                     
+                  
+                      </select>                  
+                    
+                    </div>
+                    <div class="col-md-6 col-lg-12">
+               
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-label" for="flexCheckDefault"> إجازة المريض
+                      </label>
+                    </div>
+                   
+                  
                     <div class="pt-2">
                       <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
 
                     </div>
                   </form>
-                   </div>
-                </div>
+
+              </div>
             </div>
-       
+          </div>
+          </div>
           <!---->
-        
-          
+          <!--edit-->
+          <div class="modal fade " id="edit-branches" tabindex="-1" aria-modal="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+              <div class="modal-content p-3 ">
+                <div class="modal-header px-0">
+                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    تعديل نوع الاجازات</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-0">
+                  <form class="row component-form g-3 mx-0">
+                    <div class="col-md-12 col-lg-12">
+                      <label class="form-label" for="name-Holiday-1">  نوع الاجازة</label>
+                      <input type="text" id="name-Holiday-1" class="form-control" placeholder=" نوع الاجازة " />
+                    </div>
+   
+                    <div class="col-md-12 col-lg-12">
+                      <label class="form-label" for="type-condition">  الحالة</label>
+                      <select class="select2" id="type-condition">
+                        <option label=" ">مدفوعه</option>
+                        <option>غير مدفوعة</option>
+                     
+                  
+                      </select>                  
+                    
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+               
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                      <label class="form-label" for="flexCheckDefault1">إجازة المريض
+                      </label>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                      <label class="form-label" for="name-Period-1">   الفترة الاولى(%)</label>
+                      <input type="text" id="name-Period-1" class="form-control" placeholder="  الفترة الاولى " />
+                    </div>
+                    <div class="col-md-6 col-lg-12">
+                      <label class="form-label" for="name-Period-2">   الفترة  الثانيه(%)</label>
+                      <input type="text" id="name-Period-2" class="form-control" placeholder="  الفترة الثانية " />
+                    </div>
+                    <div class="col-md-6 col-lg-12">
+                      <label class="form-label" for="name-Period-3">   الفترة  الثالثة(%)</label>
+                      <input type="text" id="name-Period-3" class="form-control" placeholder="  الفترة الثالثة " />
+                    </div>
+                    <div class="pt-2">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">تحديث</button>
+
+                    </div>
+                  </form>
+                 
+              
+              </div>
+            </div>
+          </div>
+          </div>
+            <!-- delet Modal -->
+            <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
+                <div class="modal-content p-1 p-md-3">
+                  <button
+                    type="button"
+                    class="btn-close btn-pinned"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                  <div class="modal-body text-center">
+                      <h3 class="role-title mb-2 fs-5">
+                        هل انت متاكد من حذف العنصر؟
+                      </h3>
+                    
+                    <div class="col-11 col-lg-12 mb-3">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
+                      <button  type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
+                    </div>
+                  
+                
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
@@ -1083,18 +1172,5 @@
      <script src="./assets/js/dashboards-crm.js"></script>
      <script src="./assets/vendor/js/accordion.js"></script>
      <script src="./assets/js/forms-extras.js"></script>
-     <script>
-      $(function() {
-  $("#revenue").click(function() {
-    if ($(this).is(":checked")) {
-     
-      $("#menu2").hide();
-    } else {
-      $("#menu2").show();
-    
-    }
-  });
-      })
-     </script>
   </body>
 </html>

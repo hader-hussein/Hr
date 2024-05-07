@@ -90,4 +90,13 @@
     },
     theme: 'snow'
   });
+  const fullEditorr = new Quill('#full-editor-r', {
+    bounds: '#full-editor-r',
+    placeholder: 'Type Something...',
+    modules: {
+      formula: true,
+      toolbar: fullToolbar
+    },
+    theme: 'snow'
+  });
 })();

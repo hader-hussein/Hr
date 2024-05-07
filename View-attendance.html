@@ -728,7 +728,7 @@
                         <div data-i18n="audience"> الحضور</div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item active">
+                        <li class="menu-item ">
                           <a href="Determine-attendance.html" class="menu-link">
                             <div data-i18n="Determine attendance"> تحديد الحضور </div>
                           </a>
@@ -740,7 +740,7 @@
                           </a>
                         
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item active">
                           <a href="View-attendance.html" class="menu-link">
                             <div data-i18n="View-attendance"> عرض الحضور </div>
                           </a>
@@ -875,20 +875,49 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
                 <div class="card-body py-4 px-md-4 px-2 card-widget-separator">
-                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">   تحديد الحضور</span>  </strong>
+                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">    الحضور</span>  </strong>
                 
                 </div>
               </div>
                 <div class="card comonent-hader-top p-2 mt-4">
                    <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
                    
-                    <form class="row component-form g-3 mx-0 mb-2">
-                      <div class="col-md-6">
-                        <label class="form-label" for="date-serch"> بحث بتاريخ:</label>
-                        <input type="date" class="form-control">
-                      </div>
+                    <form class="row component-form g-3 mx-0 mb-2 align-items-end">
+                      <div class="col-md-6 col-lg-3">
+                        <label class="form-label" for="name-Employee"> أسم الموظف</label>
+                        <select class="select2" id="name-Employee">
+                          <option label=" "></option>
+                          <option>احمد</option>
+                          <option>ابراهيم</option>
                     
-                 
+                        </select>                  
+                      
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <label class="form-label" for="month">  الشهر</label>
+                        <select class="select2" id="month">
+                          <option label=" "></option>
+                          <option>يناير</option>
+                          <option>فبراير</option>
+                    
+                        </select>           
+                      
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <label class="form-label" for="year">  السنة</label>
+                        <select class="select2" id="year">
+                          <option label=" "></option>
+                          <option>2022</option>
+                          <option>2023</option>
+                    
+                        </select>          
+                      
+                      </div>
+                      <div class="col-md-6 col-lg-3">
+                        <button type="submit" class="btn btn-primary w-100  waves-effect waves-light">بحث</button>
+  
+                      </div>
+                    </form>
                     <div class="card-datatable text-nowrap  table-responsive pt-0">
                       
                       <table class=" table table-bordered table-hover rounded text-center">
@@ -896,82 +925,146 @@
                           <tr>
                          
                             <th>م</th>
-                            <th>      الاسم</th>
-                            <th>       الحالة</th>
-                            <th>      الحضور</th>
+                            <th>الاسم</th>
+                            <th> 1</th>
+                            <th> 2</th>
                             
-                            <th>   وقت تسجيل الحضور/ الانصراف	</th>
+                            <th>3</th>
                            
-                            <th>      متأخر</th>
+                            <th> 4</th>
                         
-                            <th>حفظ</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                            <th>19</th>
+                            <th>20</th>
+                            <th>21</th>
+                            <th>22</th>
+                            <th>23</th>
+                            <th>24</th>
+                            <th>25</th>
+                            <th>26</th>
+                            <th>27</th>
+                            <th>28</th>
+                            <th>29</th>
+                            <th>30</th>
                           </tr>
                         </thead>
                         <tbody>
                             <tr>
-                              
-                              <td>1</td>
                               <td>
-                                فيصل نواز محمد شريف
+                                1
                               </td>
                               <td>
-                                <div class="form-check form-switch">
-                                  <div class="d-flex my-switch">
-                                    <div class="form-text text-1">غياب</div>
-                    
-                                    <div class="form-check form-switch form-check-inline mx-2">
-                                      <input id="revenue" class="form-check-input form-check-inline" type="checkbox" checked="true">
-                                    </div>
-                    
-                                    <div class="form-text text-2">حضور</div>
-                                  </div>
-                                  <div id="menu2">
-                                    <label class="form-label" for="reason"> السبب</label>
-                                    <input type="text" class="form-control" id="reason" placeholder="سبب الغياب">
-
-                                  </div>
-                                </div>
+                                احمد محمد
                               </td>
                               <td>
-                                غير محدد
+                                ----
                               </td>
                               <td>
-                                <div class="d-flex justify-content-between">
-                                    <div>
-                                      <label class="form-label" for="clock_in">تسجيل حضور</label>
-                                      <input type="time" class="form-control" id="clock_in" name="clock_in[]" value="8:00 AM">
-
-                                    </div>
-                                    <div>
-                                      <label class="form-label" for="clock_in1605">تسجيل انصراف</label>
-
-                                      <input type="time" class="form-control" id="clock_in1605" name="clock_in[]" value="8:00 pM">
-
-                                    </div>
-                                </div>
-
+                                ----
                               </td>
-                            <td>
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-
-                            </td>
                               <td>
-                                <div class="d-flex justify-content-center align-items-center">
-                                
-                                  <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center  rounded cursor-pointer" data-bs-target="#edit-branches" data-bs-toggle="modal" title="حفظ"><i class="ti ti-check  fs-4"></i> </a>
-                                
-                                </div>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
+                              </td>
+                              <td>
+                                ----
                               </td>
                             </tr>
                             
                         </tbody>
                       </table>
                     </div>
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
+                  
                    </div>
                 </div>
             </div>
@@ -1083,18 +1176,5 @@
      <script src="./assets/js/dashboards-crm.js"></script>
      <script src="./assets/vendor/js/accordion.js"></script>
      <script src="./assets/js/forms-extras.js"></script>
-     <script>
-      $(function() {
-  $("#revenue").click(function() {
-    if ($(this).is(":checked")) {
-     
-      $("#menu2").hide();
-    } else {
-      $("#menu2").show();
-    
-    }
-  });
-      })
-     </script>
   </body>
 </html>
