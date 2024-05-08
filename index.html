@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/typeahead-js/typeahead.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/fullcalendar/fullcalendar.css" />
+    <link rel="stylesheet" href="./assets/vendor/libs/flatpickr/flatpickr.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/bs-stepper/bs-stepper.css" />
     <link rel="stylesheet" href="./assets/vendor/libs/select2/select2.css" />
@@ -50,6 +52,7 @@
    
    
     <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="./assets/vendor/css/pages/app-calendar.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Helpers -->
     <script src="./assets/vendor/js/helpers.js"></script>
@@ -879,9 +882,459 @@
             <!-- Content -->
            
             <div class="container-xxl flex-grow-1 container-p-y">
-              
-            </div>
+              <div class="card comonent-hader-top">
+                <div class="card-body py-4 px-md-4 px-2 card-widget-separator">
+                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">    لوحة التحكم </span>  </strong>
+                
+                </div>
+              </div>
+              <div class="card comonent-hader-top p-2 mt-4">
+                 <div class="row row-cols-lg-2 g-2">
+                    <div class="col">
+                   
+                       <!-- Bar Charts -->
+          
+                      <div class="card">
+                        <div class="card-header header-elements">
+                          <h5 class="card-title mb-0">تقرير المصاريف</h5>
+                          <div class="card-action-element ms-auto py-0">
+                            <div class="dropdown">
+                              <button
+                                type="button"
+                                class="btn dropdown-toggle px-0"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="ti ti-calendar"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                    >Yesterday</a
+                                  >
+                                </li>
+                                <li>
+                                  <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                    >Last 7 Days</a
+                                  >
+                                </li>
+                                <li>
+                                  <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                    >Last 30 Days</a
+                                  >
+                                </li>
+                                <li>
+                                  <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                  <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                    >Current Month</a
+                                  >
+                                </li>
+                                <li>
+                                  <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                    >Last Month</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <canvas id="barChart" class="chartjs" data-height="400"></canvas>
+                        </div>
+                      </div>
+                    
+                   
+                    </div>
+                    <div class="col">
+                    <div class="card h-100">
+                      <div class="card-body py-2 px-md-4 px-2 card-widget-separator h-100">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h5 class="fs-5 fw-bold pb-0 mb-0">الطلبات</h5>
+                          <a href="view-Requests.html" class="btn btn-primary ">مشاهدة الكل</a>
+                        </div>
 
+                        <div class="card-datatable text-nowrap  table-responsive pt-2">
+                            
+                          <table class=" table table-bordered table-hover rounded">
+                            <thead class="table-light">
+                              <tr>
+                             
+                                <th>م</th>
+                                <th>   رقم الطلب   </th>
+                                <th>  رقم هوية الموظف</th>
+                                <th>أسم الموظف</th>
+                                <th>الأسم </th>
+                                <th>نوع الطلب</th>
+                                <th> التاريخ</th>
+                                <th> المبلغ(﷼) </th>
+                                <th>الملاحظات  </th>
+                                <th>الحالة  </th>
+    
+                                <th>الاجراءت</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                    <div class="d-flex justify-content-center">
+                                    
+                                      <a class="bg-success text-bg-success p-1 d-flex align-items-center justify-content-center me-3 rounded cursor-pointer" data-bs-target="#edit-branches" data-bs-toggle="modal" title="تعديل"><i class="ti ti-pencil  fs-4"></i> </a>
+                                      <a class="bg-danger text-bg-danger p-1 d-flex align-items-center justify-content-center me-3 rounded" href="javascript:void(0);" title="حذف  " data-bs-target="#closeRoleModal" data-bs-toggle="modal"><i class="ti ti-trash  fs-4"></i> </a>
+                                    
+                                    </div>
+                                  </td>
+                                </tr>
+                                
+                            </tbody>
+                          </table>
+                        </div>
+                       </div>
+                    </div>
+                     
+                    
+                    </div>
+                 </div>
+                 <div class="card app-calendar-wrapper mt-4">
+                  <div class="row g-0">
+                    <!-- Calendar Sidebar -->
+                    <div class="col app-calendar-sidebar" id="app-calendar-sidebar">
+                      <div class="border-bottom p-4 my-sm-0 mb-3">
+                        <div class="d-grid">
+                          <button
+                            class="btn btn-primary btn-toggle-sidebar"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#addEventSidebar"
+                            aria-controls="addEventSidebar">
+                            <i class="ti ti-plus me-1"></i>
+                            <span class="align-middle">Add Event</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="p-3">
+                        <!-- inline calendar (flatpicker) -->
+                        <div class="inline-calendar"></div>
+  
+                        <hr class="container-m-nx mb-4 mt-3" />
+  
+                        <!-- Filter -->
+                        <div class="mb-3 ms-3">
+                          <small class="text-small text-muted text-uppercase align-middle">Filter</small>
+                        </div>
+  
+                        <div class="form-check mb-2 ms-3">
+                          <input
+                            class="form-check-input select-all"
+                            type="checkbox"
+                            id="selectAll"
+                            data-value="all"
+                            checked />
+                          <label class="form-check-label" for="selectAll">View All</label>
+                        </div>
+  
+                        <div class="app-calendar-events-filter ms-3">
+                          <div class="form-check form-check-danger mb-2">
+                            <input
+                              class="form-check-input input-filter"
+                              type="checkbox"
+                              id="select-personal"
+                              data-value="personal"
+                              checked />
+                            <label class="form-check-label" for="select-personal">Personal</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input
+                              class="form-check-input input-filter"
+                              type="checkbox"
+                              id="select-business"
+                              data-value="business"
+                              checked />
+                            <label class="form-check-label" for="select-business">Business</label>
+                          </div>
+                          <div class="form-check form-check-warning mb-2">
+                            <input
+                              class="form-check-input input-filter"
+                              type="checkbox"
+                              id="select-family"
+                              data-value="family"
+                              checked />
+                            <label class="form-check-label" for="select-family">Family</label>
+                          </div>
+                          <div class="form-check form-check-success mb-2">
+                            <input
+                              class="form-check-input input-filter"
+                              type="checkbox"
+                              id="select-holiday"
+                              data-value="holiday"
+                              checked />
+                            <label class="form-check-label" for="select-holiday">Holiday</label>
+                          </div>
+                          <div class="form-check form-check-info">
+                            <input
+                              class="form-check-input input-filter"
+                              type="checkbox"
+                              id="select-etc"
+                              data-value="etc"
+                              checked />
+                            <label class="form-check-label" for="select-etc">ETC</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Calendar Sidebar -->
+  
+                    <!-- Calendar & Modal -->
+                    <div class="col app-calendar-content">
+                      <div class="card shadow-none border-0">
+                        <div class="card-body pb-0">
+                          <!-- FullCalendar -->
+                          <div id="calendar"></div>
+                        </div>
+                      </div>
+                      <div class="app-overlay"></div>
+                      <!-- FullCalendar Offcanvas -->
+                      <div
+                        class="offcanvas offcanvas-end event-sidebar"
+                        tabindex="-1"
+                        id="addEventSidebar"
+                        aria-labelledby="addEventSidebarLabel">
+                        <div class="offcanvas-header my-1">
+                          <h5 class="offcanvas-title" id="addEventSidebarLabel">Add Event</h5>
+                          <button
+                            type="button"
+                            class="btn-close text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body pt-0">
+                          <form class="event-form pt-0" id="eventForm" onsubmit="return false">
+                            <div class="mb-3">
+                              <label class="form-label" for="eventTitle">Title</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="eventTitle"
+                                name="eventTitle"
+                                placeholder="Event Title" />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="eventLabel">Label</label>
+                              <select class="select2 select-event-label form-select" id="eventLabel" name="eventLabel">
+                                <option data-label="primary" value="Business" selected>Business</option>
+                                <option data-label="danger" value="Personal">Personal</option>
+                                <option data-label="warning" value="Family">Family</option>
+                                <option data-label="success" value="Holiday">Holiday</option>
+                                <option data-label="info" value="ETC">ETC</option>
+                              </select>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="eventStartDate">Start Date</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="eventStartDate"
+                                name="eventStartDate"
+                                placeholder="Start Date" />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="eventEndDate">End Date</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="eventEndDate"
+                                name="eventEndDate"
+                                placeholder="End Date" />
+                            </div>
+                            <div class="mb-3">
+                              <label class="switch">
+                                <input type="checkbox" class="switch-input allDay-switch" />
+                                <span class="switch-toggle-slider">
+                                  <span class="switch-on"></span>
+                                  <span class="switch-off"></span>
+                                </span>
+                                <span class="switch-label">All Day</span>
+                              </label>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="eventURL">Event URL</label>
+                              <input
+                                type="url"
+                                class="form-control"
+                                id="eventURL"
+                                name="eventURL"
+                                placeholder="https://www.google.com" />
+                            </div>
+                            <div class="mb-3 select2-primary">
+                              <label class="form-label" for="eventGuests">Add Guests</label>
+                              <select
+                                class="select2 select-event-guests form-select"
+                                id="eventGuests"
+                                name="eventGuests"
+                                multiple>
+                                <option data-avatar="1.png" value="Jane Foster">Jane Foster</option>
+                                <option data-avatar="3.png" value="Donna Frank">Donna Frank</option>
+                                <option data-avatar="5.png" value="Gabrielle Robertson">Gabrielle Robertson</option>
+                                <option data-avatar="7.png" value="Lori Spears">Lori Spears</option>
+                                <option data-avatar="9.png" value="Sandy Vega">Sandy Vega</option>
+                                <option data-avatar="11.png" value="Cheryl May">Cheryl May</option>
+                              </select>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="eventLocation">Location</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="eventLocation"
+                                name="eventLocation"
+                                placeholder="Enter Location" />
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="eventDescription">Description</label>
+                              <textarea class="form-control" name="eventDescription" id="eventDescription"></textarea>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-sm-between justify-content-start my-4">
+                              <div>
+                                <button type="submit" class="btn btn-primary btn-add-event me-sm-3 me-1">Add</button>
+                                <button
+                                  type="reset"
+                                  class="btn btn-label-secondary btn-cancel me-sm-0 me-1"
+                                  data-bs-dismiss="offcanvas">
+                                  Cancel
+                                </button>
+                              </div>
+                              <div><button class="btn btn-label-danger btn-delete-event d-none">Delete</button></div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Calendar & Modal -->
+                  </div>
+                </div>
+              </div>
+            </div>
+  <!--edit-->
+  <div class="modal fade " id="edit-branches" tabindex="-1" aria-modal="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content p-3 ">
+        <div class="modal-header px-0">
+          <h1 class="modal-title fs-4 fw-bold text-tilte-b">    تعديل الطلب</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body px-0">
+          <form class="row component-form g-3 mx-0 align-items-center">
+            <div class="col-md-12 col-lg-4">
+              <label class="form-label" for="name-rewards-1">  الأسم</label>
+              <input type="text" id="name-rewards-1" class="form-control" placeholder=" الأسم " />
+            </div>
+            <div class="col-md-12 col-lg-8">
+              <label class="form-label" for="Description-1 ">  وصف الطلب  </label>
+              <textarea type="text" id="Description-1 " class="form-control" placeholder="وصف الطلب " rows="1"></textarea>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="form-label" for="Type-requests-1">   نوع الطلب</label>
+              <select class="select2" id="Type-requests-1">
+                <option label=" ">نوع الطلب</option>
+                <option>احمد</option>
+                <option>ابراهيم</option>
+          
+              </select> 
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="form-label" for="item-price">المبلغ المطلوب</label>
+              <input type="text" id="item-price" class="form-control"placeholder="المبلغ المطلوب"/>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="form-label" for="date-rewards">  تاريخ الطلب</label>
+              <input type="date" id="date-rewards" class="form-control"/>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="form-label" for="name-Employee">  الموظف </label>
+              <select class="select2" id="name-Employee">
+                <option label=" "></option>
+                <option>احمد</option>
+                <option>ابراهيم</option>
+          
+              </select>                  
+            
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="form-label" for="img-add-1">   المرفق</label>
+              <input type="file" id="img-add-1" class="form-control" />
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <label class="form-label" for="condition">  الحالة</label>
+                 <div class="d-flex">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                     موافق عليها
+                    </label>
+                  </div>
+                  <div class="form-check mx-2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                     قيد الانتظار
+                    </label>
+                  </div>
+                 </div>   
+            
+            </div>
+            <div class="col-md-12">
+              <label class="form-label" for="Description-one ">   الملاحظات  </label>
+              <textarea type="text" id="Description-one " class="form-control" placeholder=" الملاحظات " rows="1"></textarea>
+            </div>
+           
+          
+
+            <div class="pt-2">
+              <button type="submit" class="btn btn-primary  waves-effect waves-light">تعديل</button>
+
+            </div>
+          </form>
+         
+      
+      </div>
+    </div>
+  </div>
+  </div>
+    <!-- delet Modal -->
+    <div class="modal fade" id="closeRoleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-md modal-dialog-centered modal-add-new-role">
+        <div class="modal-content p-1 p-md-3">
+          <button
+            type="button"
+            class="btn-close btn-pinned"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+          <div class="modal-body text-center">
+              <h3 class="role-title mb-2 fs-5">
+                هل انت متاكد من حذف العنصر؟
+              </h3>
+            
+            <div class="col-11 col-lg-12 mb-3">
+              <button type="submit" class="btn btn-primary  waves-effect waves-light">نعم</button>
+              <button  type="submit" class="btn btn-label-secondary waves-effect mx-3"> لا</button>
+            </div>
+          
+        
+          </div>
+        </div>
+      </div>
+    </div>
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
@@ -959,22 +1412,33 @@
     <script src="./assets/vendor/libs/hammer/hammer.js"></script>
     <script src="./assets/vendor/libs/i18n/i18n.js"></script>
     <script src="./assets/vendor/libs/typeahead-js/typeahead.js"></script>
+
     <script src="./assets/vendor/js/menu.js"></script>
 
     <!-- endbuild -->
-
+    <script src="./assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="./assets/vendor/libs/fullcalendar/fullcalendar.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
+    <script src="./assets/vendor/libs/flatpickr/flatpickr.js"></script>
+    <script src="./assets/vendor/libs/moment/moment.js"></script>
     <!-- Vendors JS -->
     <script src="./assets/vendor/js/dropdown-hover.js"></script>
     <script src="./assets/vendor/js/mega-dropdown.js"></script>
+
     <!-- Vendors JS -->
     <script src="./assets/vendor/libs/apex-charts/apexcharts.js"></script>
     <script src="./assets/vendor/libs/select2/select2.js"></script>
     <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
     <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+    <script src="./assets/vendor/libs/chartjs/chartjs.js"></script>
+
     <script src="./assets/vendor/libs/quill/katex.js"></script>
     <script src="./assets/vendor/libs/quill/quill.js"></script>
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
+
 
     <!-- Page JS -->
 
@@ -986,7 +1450,11 @@
      <script src="./assets/vendor/js/chart.js"></script>
      <script src="./assets/js/dashboards-crm.js"></script>
      <script src="./assets/vendor/js/accordion.js"></script>
+     <script src="./assets/js/app-calendar-events.js"></script>
+     <script src="./assets/js/app-calendar.js"></script>
      <script src="./assets/js/forms-extras.js"></script>
      <script src="./assets/js/forms-editors.js"></script>
+     <script src="./assets/js/charts-chartjs.js"></script>
+     
   </body>
 </html>

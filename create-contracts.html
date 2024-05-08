@@ -1012,10 +1012,10 @@
                                       <th class="fw-bold"> قيمة البدل	</th>
                                       <th class="fw-bold"> تاريخ المحاسبة	</th>
                                       <th class="fw-bold">  التكرار</th>
-                                      
+                                      <th class="fw-bold">  </th>
                                     </tr>
                                   </thead>
-                                  <tbody class="table-border-bottom-0">
+                                  <tbody class="table-border-bottom-0" id="tbl">
                                     <tr>
                                       <td>
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -1042,7 +1042,11 @@
                                         <input type="text" id="Repetition " class="form-control"  />
   
                                       </td>
-                  
+                                      <td class="d-flex">
+                                        <button  type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
+                                        <button type="button" class="button btn btn-primary add_another" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus"></i></button>
+                                     
+                                     </td>
                                       
                                     </tr>
                                   </tbody>

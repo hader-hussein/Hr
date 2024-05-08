@@ -896,9 +896,9 @@
                                 </div>
                                 <div class="col-sm-7 col-12">
                                   <div class="card-body text-sm-end text-center ps-sm-0">
-                                    <button data-bs-target="#addtruck" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
+                                    <a href="add-view-Requests.html" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
                                   اضافة  طلب 
-                                    </button>
+                                    </a>
                                     <p class="mb-0 mt-1">Add Requests data , if it does not exist</p>
                                   </div>
                                 </div>
@@ -964,92 +964,7 @@
                 </div>
             </div>
           <!-- Add Hardware Modal -->
-          <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
-                     إضافة الطلب
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form g-3 mx-0 align-items-center">
-                    <div class="col-md-12 col-lg-4">
-                      <label class="form-label" for="name-rewards">  الأسم</label>
-                      <input type="text" id="name-rewards" class="form-control" placeholder=" الأسم " />
-                    </div>
-                    <div class="col-md-12 col-lg-8">
-                      <label class="form-label" for="Description ">  وصف الطلب  </label>
-                      <textarea type="text" id="Description " class="form-control" placeholder="وصف الطلب " rows="1"></textarea>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                      <label class="form-label" for="Type-requests">   نوع الطلب</label>
-                      <select class="select2" id="Type-requests">
-                        <option label=" ">نوع الطلب</option>
-                        <option>احمد</option>
-                        <option>ابراهيم</option>
-                  
-                      </select> 
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                      <label class="form-label" for="item-price-1">المبلغ المطلوب</label>
-                      <input type="text" id="item-price-1" class="form-control"placeholder="المبلغ المطلوب"/>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                      <label class="form-label" for="name-rewards">  تاريخ الطلب</label>
-                      <input type="date" id="name-rewards" class="form-control"/>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                      <label class="form-label" for="name-Employee-1">  الموظف </label>
-                      <select class="select2" id="name-Employee-1">
-                        <option label=" "></option>
-                        <option>احمد</option>
-                        <option>ابراهيم</option>
-                  
-                      </select>                  
-                    
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                      <label class="form-label" for="img-add">   المرفق</label>
-                      <input type="file" id="img-add" class="form-control" />
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                      <label class="form-label" for="condition">  الحالة</label>
-                         <div class="d-flex">
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                             موافق عليها
-                            </label>
-                          </div>
-                          <div class="form-check mx-2">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                             قيد الانتظار
-                            </label>
-                          </div>
-                         </div>   
-                    
-                    </div>
-                    <div class="col-md-12">
-                      <label class="form-label" for="Description-one ">   الملاحظات  </label>
-                      <textarea type="text" id="Description-one " class="form-control" placeholder=" الملاحظات " rows="1"></textarea>
-                    </div>
-                   
-                  
-
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-                 
-              
-              </div>
-            </div>
-          </div>
-          </div>
+        
           <!---->
           <!--edit-->
           <div class="modal fade " id="edit-branches" tabindex="-1" aria-modal="true">

@@ -53,5 +53,32 @@ function optionCheck() {
    }
 }
 /************************ */
+function addField(n)
+{
+    var tr = n.parentNode.parentNode.cloneNode(true);
+    document.getElementById('tbl').appendChild(tr);
+    var removeButton = tr.getElementsByTagName("button")[1];
+    removeButton.parentNode.removeChild(removeButton);
+  
+}
+$(document).ready(function(){
+  $("#my-table").on('click','.btnDelete',function(){
+      $(this).closest('tr').remove();
+   });
+   
+});
 
-
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+            $('#imagePreview').hide();
+            $('#imagePreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+  }
+  $("#imageUpload").change(function() {
+    readURL(this);
+  });

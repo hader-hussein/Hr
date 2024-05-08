@@ -48,6 +48,8 @@
     <link rel="stylesheet" href="./assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
    
+   
+   
     <link rel="stylesheet" href="./assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Helpers -->
@@ -567,7 +569,7 @@
                   </li>
 
                   <!-- Apps -->
-                  <li class="menu-item active">
+                  <li class="menu-item ">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
                       <i class="fa fa-user"></i>
                       <div data-i18n="People">أشخاص</div>
@@ -581,7 +583,7 @@
                         </a>
                        
                       </li>
-                      <li class="menu-item active">
+                      <li class="menu-item">
                         <a href="view-employees.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-users"></i>
                           <div data-i18n="employees">  الموظفين</div>
@@ -615,7 +617,7 @@
                   </li>
                   
                   <!-- Personnel -->
-                  <li class="menu-item">
+                  <li class="menu-item active">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
                      
                       <i class="menu-icon tf-icons fa-solid fa-briefcase"></i>
@@ -623,7 +625,7 @@
                       </div>
                     </a>
                     <ul class="menu-sub">
-                      <li class="menu-item">
+                      <li class="menu-item ">
                         <a href="view-Rewards.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-settings"></i>
                           
@@ -638,7 +640,7 @@
                         </a>
                        
                       </li>
-                      <li class="menu-item">
+                      <li class="menu-item active">
                         <a href="view-Requests.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-settings"></i>
                           <div data-i18n="Requests"> الطلبات</div>
@@ -879,664 +881,124 @@
            
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
-                <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                  <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-4">
-                    <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
-                      <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> بيانات الموظف</span>  </strong>
-
-
-                    </div>
-                    <div class="col text-end">
-                      <a href="view-employees.html" class="btn btn-primary waves-effect waves-light btn-add"> مشاهدة الكل</a>
-    
-                    </div>
-                  </div>
-                  
+                <div class="card-body py-4 px-md-4 px-2  card-widget-separator">
+                  <strong class="py-md-3 px-md-3  text-title-hadeer text-tilte-b"><span class="text-muted fw-medium"> الطلبات</span>  </strong>
+                 
                 </div>
-              
-             </div>
-              <div class="card comonent-hader-top mt-4">
-                <div class="card-body  card-widget-separator">
-
-
-                <!-- Default Wizard -->
-                  <div class="col-12 mb-4">
-          
-                    <div class="bs-stepper wizard-numbered mt-2">
-                      <div class="bs-stepper-header">
-                        <div class="step" data-target="#account-details">
-                          <button type="button" class="step-trigger">
-                            <span class="bs-stepper-circle">1</span>
-                            <span class="bs-stepper-label">
-                              <span class="bs-stepper-title">البيانات الشخصية</span>
-                              <span class="bs-stepper-subtitle">Setup Account Details</span>
-                            </span>
-                          </button>
-                        </div>
-                        <div class="line">
-                          <i class="ti ti-chevron-right"></i>
-                        </div>
-                        <div class="step" data-target="#personal-info">
-                          <button type="button" class="step-trigger">
-                            <span class="bs-stepper-circle">2</span>
-                            <span class="bs-stepper-label">
-                              <span class="bs-stepper-title">تفاصيل الشركة</span>
-                              <span class="bs-stepper-subtitle">Add Company details </span>
-                            </span>
-                          </button>
-                        </div>
-                        <div class="line">
-                          <i class="ti ti-chevron-right"></i>
-                        </div>
-                        <div class="step" data-target="#social-links">
-                          <button type="button" class="step-trigger">
-                            <span class="bs-stepper-circle">3</span>
-                            <span class="bs-stepper-label">
-                              <span class="bs-stepper-title">تفاصيل البنك</span>
-                              <span class="bs-stepper-subtitle">Add Bank details</span>
-                            </span>
-                          </button>
-                        </div>
-
-                        <div class="line">
-                          <i class="ti ti-chevron-right"></i>
-                        </div>
-                        <div class="step" data-target="#Escorts-links">
-                          <button type="button" class="step-trigger">
-                            <span class="bs-stepper-circle">4</span>
-                            <span class="bs-stepper-label">
-                              <span class="bs-stepper-title"> المرافقين</span>
-                              <span class="bs-stepper-subtitle">Add Escorts details</span>
-                            </span>
-                          </button>
-                        </div>
-                        <div class="line">
-                          <i class="ti ti-chevron-right"></i>
-                        </div>
-                        <div class="step" data-target="#file-links">
-                          <button type="button" class="step-trigger">
-                            <span class="bs-stepper-circle">5</span>
-                            <span class="bs-stepper-label">
-                              <span class="bs-stepper-title"> مستندات</span>
-                              <span class="bs-stepper-subtitle">Add Escorts details</span>
-                            </span>
-                          </button>
-                        </div>
+              </div>
+                <div class="card comonent-hader-top p-2 mt-4">
+                   <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
+                   
+                    <form class="row component-form g-3 mx-0 align-items-center">
+                      <div class="col-md-12 col-lg-4">
+                        <label class="form-label" for="name-rewards">  الأسم</label>
+                        <input type="text" id="name-rewards" class="form-control" placeholder=" الأسم " />
                       </div>
-                      <div class="bs-stepper-content">
-                        <form onSubmit="return false">
-                          <!-- Account Details -->
-                          <div id="account-details" class="content">
-                            <div class="content-header mb-3">
-                              <h6 class="mb-0 fs-3 fw-bold">البيانات الشخصية</h6>
-                              <small class="fs-6">أدخل تفاصيل حسابك.</small>
-                            </div>
-                            <div class="row g-3">
-                              <div class="col-md-12">
-                                <label class="form-label" for="image-add"> اضافه صوره</label>
-                                <div class="img-porfoil mb-3">
-                                  <div class="avatar-edit">
-                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                    <label for="imageUpload">
-                                     <img src="./assets/img/avatars/pen.png" style="width: 25px;">
-    
-                                    </label>
-                                  </div>
-                                  <div class="avatar-preview">
-                                    <div id="imagePreview" style="background-image: url(./assets/img/avatars/1.png);">
-                                    </div>
-                                  
-                                  </div>
-                                  </div>
-                                </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="username">الاسم بالعربى</label>
-                                <input type="text" id="username" class="form-control" placeholder="الاسم بالعربى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="username-e">الاسم بالانجيلزى</label>
-                                <input type="text" id="username-e" class="form-control" placeholder="الاسم بالانجيلزى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="date-form"> تاريخ الميلاد</label>
-                                <input type="date" id="date-form" class="form-control"  />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Type">الجنس</label>
-                                <select class="select2" id="Type">
-                                  <option label=" "></option>
-                                  <option>ذكر</option>
-                                  <option>انثى</option>
-                            
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="phone"> الهاتف</label>
-                                <input type="text" id="phone" class="form-control" placeholder=" الهاتف" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="address-1"> العنوان المحلي (عربي)</label>
-                                <input type="text" id="address-1" class="form-control" placeholder="العنوان بالعربى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="address-2"> العنوان المحلي (إنجليزي)</label>
-                                <input type="text" id="address-2" class="form-control" placeholder=" العنوان انجيلزى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="address-3">  العنوان الدائم</label>
-                                <input type="text" id="address-3" class="form-control" placeholder="  العنوان الدائم" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Postal-code">   الرمز البريدي</label>
-                                <input type="text" id="Postal-code" class="form-control" placeholder="   الرمز البريدي" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Postal-box">   الصندوق البريدي</label>
-                                <input type="text" id="Postal-box" class="form-control" placeholder="   الصندوق البريدي" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="email">البريد الاكترونى</label>
-                                <input
-                                  type="email"
-                                  id="email"
-                                  class="form-control"
-                                  placeholder="john.doe@email.com"
-                                  aria-label="john.doe" />
-                              </div>
-                              <div class="col-md-4 form-password-toggle">
-                                <label class="form-label" for="password">كلمة المرور</label>
-                                <div class="input-group input-group-merge">
-                                  <input
-                                    type="password"
-                                    id="password"
-                                    class="form-control"
-                                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                    aria-describedby="password2" />
-                                  <span class="input-group-text cursor-pointer" id="password2"
-                                    ><i class="ti ti-eye-off"></i
-                                  ></span>
-                                </div>
-                              </div>
-                              <div class="col-12 d-flex justify-content-between">
-                                <button class="btn btn-label-secondary btn-prev" disabled>
-                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                                </button>
-                                <button class="btn btn-primary btn-next">
-                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                                  <i class="ti ti-arrow-right"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Cmopany Info -->
-                          <div id="personal-info" class="content">
-                            <div class="content-header mb-3">
-                              <h6 class="mb-0 fs-3 fw-bold">البيانات الشركة</h6>
-                              <small class="fs-6">أدخل تفاصيل الشركة.</small>
-                            </div>
-                            <div class="row g-3">
-                              <div class="col-md-4">
-                                <label class="form-label" for="Employee-ID">رقم هوية الموظف</label>
-                                <input type="text" id="Employee-ID" class="form-control" placeholder="رقم هوية الموظف" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Cmopany">الشركة</label>
-                                <select
-                                  class="select2 w-auto" id="Cmopany">
-                                  <option>شركة الاهرامات الارابعه</option>
-                                  <option>French</option>
-                                  <option>Spanish</option>
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Administration">الادارة</label>
-                                <select
-                                  class="select2 w-auto" id="Administration">
-                                  <option>شركة الاهرامات الارابعه</option>
-                                  <option>French</option>
-                                  <option>Spanish</option>
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="job-name">الوظيفة (عربي)</label>
-                                <input type="text" id="job-name" class="form-control" placeholder="الوظيفة (عربي)" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="job-name-e">الوظيفة (انجيلزى)</label>
-                                <input type="text" id="job-name-e" class="form-control" placeholder="الوظيفة (عربي)" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Accrued-name"> الإجازات المستحقة</label>
-                                <input type="text" id="Accrued-name" class="form-control" placeholder=" الإجازات المستحقة" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Balance ">الرصيد المستخدم من قبل</label>
-                                <input type="text" id="Balance " class="form-control" placeholder=" الرصيد المستخدم من قبل" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="date-form-1"> تاريخ الانضمام</label>
-                                <input type="date" id="date-form-1" class="form-control"  />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Nationality">الجنسية</label>
-                                <select
-                                  class="select2 w-auto" id="Nationality">
-                                  <option>  مصرى</option>
-                                  <option>French</option>
-                                  <option>Spanish</option>
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="account">الحساب</label>
-                                <select
-                                  class="select2 w-auto" id="account">
-                                  <option>  مصرى</option>
-                                  <option>French</option>
-                                  <option>Spanish</option>
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Branch">الفرع</label>
-                                <div class="input-groupe">
-                                  <button data-bs-target="#addtruck" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة  
-                                  </button>
-                                  <select class="select2 " id="Branch">
-                                    <option>  اختر الفرع</option>
-                                    <option>French</option>
-                                    <option>Spanish</option>
-                                  </select>
-                                </div>
-                              
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Region">المنطقة</label>
-                                <div class="input-groupe">
-                                  <button data-bs-target="#add-areas" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة  
-                                  </button>
-                                  <select class="select2 w-auto" id="Region">
-                                    <option>  اختر المنطقة</option>
-                                    <option>French</option>
-                                    <option>Spanish</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="cost">مركز التكلفة</label>
-                                <div class="input-groupe">
-                                  <button data-bs-target="#add-totile" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة  
-                                  </button>
-                                  <select
-                                    class="select2 w-auto" id="cost">
-                                    <option>  اختر مركز التكلفة</option>
-                                    <option>French</option>
-                                    <option>Spanish</option>
-                                  </select>
-                                  </div>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Type-of"> نوع الإقامة</label>
-                                <input type="text" id="Type-of" class="form-control" placeholder="نوع الإقامة" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Proof-number">  رقم الإثبات</label>
-                                <input type="text" id="Proof-number" class="form-control" placeholder=" رقم الإثبات" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="date-form-2">  تاريخ نهاية الإقامة</label>
-                                <input type="date" id="date-form-2" class="form-control"  />
-                              </div>
-                              <div class="col-12 d-flex justify-content-between">
-                                <button class="btn btn-label-secondary btn-prev">
-                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                                </button>
-                                <button class="btn btn-primary btn-next">
-                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                                  <i class="ti ti-arrow-right"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Bank Links -->
-                          <div id="social-links" class="content">
-                            <div class="content-header mb-3">
-                              <h6 class="mb-0 fs-3 fw-bold"> تفاصيل البنك</h6>
-                              <small class="fs-6">أدخل تفاصيل البنك.</small>
-                            </div>
-                            <div class="row g-3">
-                              <div class="col-md-4">
-                                <label class="form-label" for="name-acount">  أسم صاحب الحساب</label>
-                                <input type="text" id="name-acount" class="form-control" placeholder=" أسم صاحب الحساب " />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="number-acount">    رقم الحساب</label>
-                                <input type="text" id="number-acount" class="form-control" placeholder=" رقم الحساب   " />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="name-bank">     أسم البنك</label>
-                                <input type="text" id="name-bank" class="form-control" placeholder="  أسم البنك   " />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Bank-ID">     كود هوية البنك</label>
-                                <input type="text" id="Bank-ID" class="form-control" placeholder=" كود هوية البنك  " />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Branch-2">مقر الفرع</label>
-                                <div class="input-groupe">
-                                  <button data-bs-target="#add-Branch" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
-                                    اضافة  
-                                  </button>
-                                <select class="select2 " id="Branch-2">
-                                  <option>  اختر الفرع</option>
-                                  <option>French</option>
-                                  <option>Spanish</option>
-                                </select>
-                              </div>
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="Taxpayer-ID">   رقم هوية دافع الضرائب    </label>
-                                <input type="text" id="Taxpayer-ID" class="form-control" placeholder=" رقم هوية دافع الضرائب " />
-                              </div>
-                              <div class="col-12 d-flex justify-content-between">
-                                <button class="btn btn-label-secondary btn-prev">
-                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                                </button>
-                                <button class="btn btn-primary btn-next">
-                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                                  <i class="ti ti-arrow-right"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                           <!-- Escorts-links -->
-                           <div id="Escorts-links" class="content">
-                            <div class="content-header mb-3">
-                              <h6 class="mb-0 fs-3 fw-bold">البيانات المرافقين</h6>
-                              <small class="fs-6">أدخل تفاصيل المرافقين.</small>
-                            </div>
-
-                            <div class="table-responsive text-nowrap rounded card-datatable pt-4 pb-4">
-
-                              <table class="table table-bordered table-hover rounded tabel-table" id="my-table">
-                                <thead class="table-light">
-                                  <tr class="fw-bold">
-                                    <th class="fw-bold">م</th>
-                                    <th class="fw-bold"> الاسم بالعربى</th>
-                                    <th class="fw-bold">الاسم بالانجيلزى</th>
-                                    <th class="fw-bold"> تاريخ الميلاد</th>
-                                    <th class="fw-bold"> الصلة</th>
-                                    <th class="fw-bold"> الهاتف</th>
-                                    <th class="fw-bold"> البريد الاكترونى</th>
-                                    <th class="fw-bold"> الجنسية</th>
-                                    <th class="fw-bold"> الجنس</th>
-                                    <th class="fw-bold"> التامين الطبي</th>
-                                    <th class="fw-bold"> عدد تزاكر الطيران</th>
-                                    <th class="fw-bold"> نوع الإثبات</th>
-                                    <th class="fw-bold">  رقم الإثبات</th>
-                                    <th class="fw-bold">  رقم الإقامة</th>
-                                    <th class="fw-bold">   تاريخ نهاية الإقامة</th>
-                                    <th></th>
-                              
-                                  </tr>
-                                </thead>
-                                <tbody class="table-border-bottom-0" id="tbl">
-                                  <tr>
-                                    <td></td>
-                                    <td> 
-                                      <input type="text" id="username-1" class="form-control" placeholder="الاسم بالعربى" />
-                                     </td>
-                              
-                                    <td>   
-                                       <input type="text" id="username-e-1" class="form-control" placeholder="الاسم بالانجيلزى" />
-                                    </td>
-                                    <td> 
-                                      <input type="date" id="date-form-5" class="form-control"  />
-                                
-                                    <td>  
-                                      <select class="select form-select" id="Relevance-2">
-                                        <option>  اختر الصلة</option>
-                                        <option>اب</option>
-                                        <option>ابن</option>
-                                      </select>
-                                    </td>
-                                    <td>   
-                                       <input type="text" id="phone-number" class="form-control" placeholder="الهاتف " />
-                                    </td>
-                                    <td>
-                                      <input
-                                      type="email"
-                                      id="email-1"
-                                      class="form-control"
-                                      placeholder="john.doe@email.com"
-                                      aria-label="john.doe" />
-                                    </td>
-                                    <td>
-                                      <input type="text" id="Nationality " class="form-control" placeholder=" الجنسية  " />
-
-                                    </td>
-                                    <td>
-                                      <input type="text" id="type-of " class="form-control" placeholder="   الجنس" />
-
-                                    </td>
-                                    <td>
-                                      <input type="text" id="Medical " class="form-control" placeholder="  التامين الطبي" />
-
-                                    </td>
-                                    <td>                    
-                                      
-                                      <input type="text" id="number-tect" class="form-control" placeholder="  عدد تزاكر الطيران" />
-                                    </td>
-                                    <td>                    
-                                      
-                                      <input type="text" id="proof" class="form-control" placeholder=" نوع الإثبات" />
-                                    </td>
-                                    <td>
-                                      <input type="text" id="number-proof" class="form-control" placeholder=" رقم الإثبات" />
-
-                                    </td>
-                                    <td>
-                                      <input type="text" id="number-Residency" class="form-control" placeholder=" رقم الإقامة" />
-
-                                    </td>
-                                    <td>
-                                      <input type="date" id="date-form-6" class="form-control"  />
-                                    </td>
-                                  
-                                    <td class="d-flex">
-                                      <button  type="button" class="bg-danger btn btnDelete text-bg-danger remove_row p-1 d-flex align-items-center justify-content-center me-3 rounded"  title="حذف"><i class="ti ti-trash  fs-4"></i> </button>
-                                      <button type="button" class="button btn btn-primary add_another" value="Add another line" onclick="addField(this);"><i class="fa-solid fa-plus"></i></button>
-                                   
-                                   </td>
-                                    
-                                  </tr>
-                                </tbody>
-                            
-                              </table>
-
-                            </div>
-
-                              <div class="col-12 d-flex justify-content-between mt-2">
-                                <button class="btn btn-label-secondary btn-prev">
-                                  <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                                  <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                                </button>
-                                <button class="btn btn-primary btn-next">
-                                  <span class="align-middle d-sm-inline-block d-none me-sm-1">Next</span>
-                                  <i class="ti ti-arrow-right"></i>
-                                </button>
-                              </div>
-                            </div>
+                      <div class="col-md-12 col-lg-8">
+                        <label class="form-label" for="Description ">  وصف الطلب  </label>
+                        <textarea type="text" id="Description " class="form-control" placeholder="وصف الطلب " rows="1"></textarea>
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <label class="form-label" for="Type-requests">   نوع الطلب</label>
+                        <div class="input-groupe">
+                          <button data-bs-target="#addtruck" type="button" data-bs-toggle="modal" class="btn btn-primary mb-2 text-nowrap add-new-role waves-effect waves-light text-withe">
+                            اضافة  
+                          </button>
+                          <select class="select2" id="Type-requests">
+                            <option label=" ">نوع الطلب</option>
+                            <option>احمد</option>
+                            <option>ابراهيم</option>
                       
-                            <!-- file-links -->
-                            <div id="file-links" class="content">
-                              <div class="content-header mb-3">
-                                <h6 class="mb-0 fs-3 fw-bold">المستندات </h6>
-                                <p class="fs-4">
-                                  اضافه الملفات التالية المطلوبه:السيرة الذاتية
-                                  /خطاب العرض
-                                  /خطاب الإنضمام
-                                  /العقد-الإتفاق/إثبات الهوية
-
-
-                                </p>
-                              </div>
-                                <div class="form-repeater pt-2">
-                                  <div data-repeater-list="group-a">
-                                      <div data-repeater-item class="col-lg-12">
-                                        <div class="row mx-0">
-                                          <div class="mb-3 col-12 col-lg-5">
-                                              <label class="form-label" for="inputFile01">اضافه ملف <span class="start-form">*</span></label>
-                                              <input type="file" class="form-control" id="inputFile01">
-                                           
-                                          </div>
-                                          <div class="mb-3 col-lg-5 col-12">
-                                            <label class="form-label" for="form-repeater-name">   الاسم<span class="start-form">*</span></label>
-                                            <input type="text" id="form-repeater-name" class="form-control" placeholder="اسم الملف" />
-                                          </div>
-                                          <div class="mb-3 col-lg-2  col-12 d-flex align-items-center mb-0">
-                                            <button class="btn btn-label-danger mt-4" data-repeater-delete>
-                                              <i class="ti ti-x ti-xs me-1"></i>
-                                              <span class="align-middle">Delete</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                        <hr />
-      
-                                      </div>
-                                      <div class="mb-3">
-                                        <button class="btn btn-primary" data-repeater-create type="button">
-                                          <i class="ti ti-plus me-1"></i>
-                                          <span class="align-middle">Add New</span>
-                                        </button>
-                                      </div>
-                                  </div>
-                                 
-                                </div>
-                                <div class="col-12 d-flex justify-content-between">
-                                
-                                  <button class="btn btn-label-secondary btn-prev">
-                                    <i class="ti ti-arrow-left me-sm-1 me-0"></i>
-                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                                  </button>
-                                  <div>
-                                    <button class="btn btn-primary btn-submit">حفظ</button>
-                                  </div>
-                                </div>
-                             
+                          </select> 
+                        </div>
+                      
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <label class="form-label" for="item-price-1">المبلغ المطلوب</label>
+                        <input type="text" id="item-price-1" class="form-control"placeholder="المبلغ المطلوب"/>
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <label class="form-label" for="name-rewards">  تاريخ الطلب</label>
+                        <input type="date" id="name-rewards" class="form-control"/>
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <label class="form-label" for="name-Employee-1">  الموظف </label>
+                        <select class="select2" id="name-Employee-1">
+                          <option label=" "></option>
+                          <option>احمد</option>
+                          <option>ابراهيم</option>
+                    
+                        </select>                  
+                      
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <label class="form-label" for="img-add">   المرفق</label>
+                        <input type="file" id="img-add" class="form-control" />
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <label class="form-label" for="condition">  الحالة</label>
+                           <div class="d-flex">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                               موافق عليها
+                              </label>
                             </div>
-                        </form>
+                            <div class="form-check mx-2">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                               قيد الانتظار
+                              </label>
+                            </div>
+                           </div>   
+                      
                       </div>
-                    </div>
-                  </div>
-                  <!---->
-                  </div>
-              </div>
-            </div>
-            <!--اضافه فرع-->
-           <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    اضافة الفرع</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form  mx-0">
-                    <div class="col-md-12">
-                      <label class="form-label" for="componyname-e"> الاسم</label>
-                      <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
-                    </div>
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-                 
-              
-              </div>
-            </div>
-          </div>
-          </div>
-          <!--اضافة منطقة-->
-          <div class="modal fade " id="add-areas" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-            <div class="modal-dialog modal-md modal-dialog-centered">
-              <div class="modal-content p-3 ">
-                <div class="modal-header px-0">
-                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    اضافة منطقة</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body px-0">
-                  <form class="row component-form  mx-0">
-                    <div class="col-md-12">
-                      <label class="form-label" for="componyname-e"> الاسم</label>
-                      <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
-                    </div>
-                    <div class="pt-2">
-                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-
-                    </div>
-                  </form>
-                 
-              
-              </div>
-            </div>
-          </div>
-          </div>
-            <!--اضافة مركز التكلفة-->
-            <div class="modal fade " id="add-totile" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-              <div class="modal-dialog modal-md modal-dialog-centered">
-                <div class="modal-content p-3 ">
-                  <div class="modal-header px-0">
-                    <h1 class="modal-title fs-4 fw-bold text-tilte-b">    اضافة مركز التكلفة</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body px-0">
-                    <form class="row component-form  mx-0">
                       <div class="col-md-12">
-                        <label class="form-label" for="componyname-e"> الاسم</label>
-                        <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
+                        <label class="form-label" for="Description-one ">   الملاحظات  </label>
+                        <textarea type="text" id="Description-one " class="form-control" placeholder=" الملاحظات " rows="1"></textarea>
                       </div>
+                     
+                    
+  
                       <div class="pt-2">
                         <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
   
                       </div>
                     </form>
-                   
-                
+                   </div>
                 </div>
-              </div>
             </div>
-            </div>
-              <!--اضافة فرع بنك-->
-              <div class="modal fade " id="add-Branch" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
-                <div class="modal-dialog modal-md modal-dialog-centered">
-                  <div class="modal-content p-3 ">
-                    <div class="modal-header px-0">
-                      <h1 class="modal-title fs-4 fw-bold text-tilte-b">    اضافة  فرع البنك</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body px-0">
-                      <form class="row component-form  mx-0">
-                        <div class="col-md-12">
-                          <label class="form-label" for="componyname-e"> الاسم</label>
-                          <input type="text" id="componyname-e" class="form-control" placeholder="الاسم " />
-                        </div>
-                        <div class="pt-2">
-                          <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
-    
-                        </div>
-                      </form>
-                     
+          <!-- Add Hardware Modal -->
+          <div class="modal fade " id="addtruck" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+              <div class="modal-content p-3 ">
+                <div class="modal-header px-0">
+                  <h1 class="modal-title fs-4 fw-bold text-tilte-b">    
+                     إضافة الطلب
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-0">
                   
-                  </div>
-                </div>
+                  <form class="row component-form g-3 mx-0">
+                    <div class="col-md-12 col-lg-12">
+                      <label class="form-label" for="name-requests">  الاسم</label>
+                      <input type="text" id="name-requests" class="form-control" placeholder=" الاسم " />
+                    </div>
+                  
+                    <div class="pt-2">
+                      <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+
+                    </div>
+                  </form>
+              
               </div>
-              </div>
+            </div>
+          </div>
+          </div>
+          <!---->
+         
+           
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
@@ -1626,11 +1088,7 @@
     <script src="./assets/vendor/libs/select2/select2.js"></script>
     <script src="./assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
     <script src="./assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
-    <script src="./assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
-    <script src="./assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
-    <script src="./assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
-    <script src="./assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
-
+    
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
@@ -1645,8 +1103,5 @@
      <script src="./assets/js/dashboards-crm.js"></script>
      <script src="./assets/vendor/js/accordion.js"></script>
      <script src="./assets/js/forms-extras.js"></script>
-     <script src="./assets/js/form-wizard-numbered.js"></script>
-    
-   
   </body>
 </html>
