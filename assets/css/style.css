@@ -573,3 +573,6 @@ color: #dbdade !important;
   width: 100px;
   height: 100px;
 }
+.fc .fc-view-harness{
+  width: 100% !important;
+}
