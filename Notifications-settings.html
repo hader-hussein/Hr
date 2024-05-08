@@ -568,14 +568,14 @@
                   </li>
 
                   <!-- Apps -->
-                  <li class="menu-item active">
+                  <li class="menu-item ">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
                       <i class="fa fa-user"></i>
                       <div data-i18n="People">أشخاص</div>
                     </a>
 
                     <ul class="menu-sub">
-                      <li class="menu-item active">
+                      <li class="menu-item ">
                         <a href="view-Companies.html" class="menu-link">
                           <i class="menu-icon tf-icons ti ti-menu-2"></i>
                           <div data-i18n="Companies"> الشركات</div>
@@ -799,7 +799,7 @@
                   </li>
 
                   <!-- General Settings-->
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="javascript:void(0)" class="menu-link menu-toggle">
                     <i class="menu-icon  fa-solid fa-gears"></i>
                     <div data-i18n="General Settings">  الإعدادات العامه </div>
@@ -819,14 +819,14 @@
                         <div data-i18n="general-setting">  الاعدادت العامة </div>
                       </a>
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item ">
                       <a href="Profile-settings.html" class="menu-link">
                         <i class="menu-icon tf-icons ti ti-settings"></i>
 
                         <div data-i18n="Profile settings">  الاعدادت الملف الشخصى </div>
                       </a>
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item active">
                       <a href="Notifications-settings.html" class="menu-link">
                         <i class="menu-icon tf-icons ti ti-settings"></i>
 
@@ -880,188 +880,145 @@
            
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="card comonent-hader-top">
-                <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
-                  <div class="row mx-0 d-flex flex-wrap  justify-content-between  mb-3 align-items-center pt-4">
-                    <div class="col col-md-8 col-12  mb-md-4 mb-2 ">
-                      <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">بيانات الشركة</span>  </strong>
+                <div class="card-body py-4 px-md-4 px-2 card-widget-separator">
+                      <strong class="py-md-3 px-md-3 text-title-hadeer text-tilte-b"><span class="text-muted fw-medium">إعدادات إخطارات البريد الإلكتروني </span>  </strong>
 
-
-                    </div>
-                    <div class="col text-end">
-                      <a href="view-Companies.html" class="btn btn-primary waves-effect waves-light btn-add"> مشاهدة الكل</a>
-    
-                    </div>
-                  </div>
-                  
                 </div>
               
              </div>
               <div class="card comonent-hader-top mt-4">
-                <div class="card-body py-2 px-0 card-widget-separator">
-                  <div class="accordion from-cllapse" id="accordionExample">
-                    <form class="row component-form pt-4 mx-0">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            ادخل بيانات الشركة
-                          </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <div class="row mx-0 g-3">
-                                <div class="col-md-12 mt-4">
-                                <label class="form-label" for="image-add">  شعار الشركة</label>
-                                <div class="img-porfoil mb-3">
-                                  <div class="avatar-edit">
-                                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                    <label for="imageUpload">
-                                     <img src="./assets/img/avatars/pen.png" style="width: 25px;">
-    
-                                    </label>
-                                  </div>
-                                  <div class="avatar-preview">
-                                    <div id="imagePreview" style="background-image: url(./assets/img/avatars/1.png);">
-                                    </div>
-                                  
-                                  </div>
-                                  </div>
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="time-form">  بداية وقت المكتب</label>
-                                  <input type="time" id="time-form" class="form-control">
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="time-form-1">  نهاية وقت المكتب</label>
-                                  <input type="time" id="time-form-1" class="form-control">
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="componyname"> أسم الشركة (عربي)</label>
-                                  <input type="text" id="componyname" class="form-control" placeholder="الاسم بالعربى" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="componyname-e">أسم الشركة (إنجليزي)</label>
-                                  <input type="text" id="componyname-e" class="form-control" placeholder="الاسم بالانجيلزى" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="address-1"> عنوان الشركة (عربي)</label>
-                                  <input type="text" id="address-1" class="form-control" placeholder="العنوان بالعربى" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="address-2"> عنوان الشركة (إنجليزي)</label>
-                                  <input type="text" id="address-2" class="form-control" placeholder="  عنوان الشركة" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="characteristic-1"> صفة الشركة (عربي)</label>
-                                  <input type="text" id="characteristic-1" class="form-control" placeholder=" صفهة الشركة" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="characteristic-2">  صفة الشركة (إنجليزي)</label>
-                                  <input type="text" id="characteristic-2" class="form-control" placeholder="  صفه الشركة" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="city-2">البلد</label>
-                                  <select class="select2" id="city-2">
-                                    <option label=" "></option>
-                                    <option>مصر</option>
-                                    <option>المغرب</option>
+                <div class="card-body py-2 px-md-4 px-2 card-widget-separator">
+                     <form>
+                      <div class="card-datatable text-nowrap  table-responsive pt-0">
+                      
+                        <table class=" table table-bordered table-hover rounded text-center">
+                          <thead class="table-light">
+                            <tr>
+                           
+                              <th>مكافآت</th>
+                              <th> الحضور</th>
+                              <th>لوح الإشعارات</th>
+                              <th>كشف المرتب</th>
                               
-                                  </select>
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="phone"> الهاتف</label>
-                                  <input type="text" id="phone" class="form-control" placeholder=" الهاتف" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="fax"> فاكس</label>
-                                  <input type="text" id="fax" class="form-control" placeholder=" فاكس" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="Postal-code">   الرمز البريدي</label>
-                                  <input type="text" id="Postal-code" class="form-control" placeholder="   الرمز البريدي" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="Postal-box">   الصندوق البريدي</label>
-                                  <input type="text" id="Postal-box" class="form-control" placeholder="   الصندوق البريدي" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="Commercial -box">   رقم السجل التجاري</label>
-                                  <input type="text" id="Commercial -box" class="form-control" placeholder="    رقم السجل التجارى" />
-                                </div>
-                                <div class="col-md-4">
-                                  <label class="form-label" for="email"> البريد الإلكتروني للشركة</label>
-                                  <input
-                                    type="email"
-                                    id="email"
-                                    class="form-control"
-                                    placeholder="john.doe@email.com"
-                                    aria-label="john.doe" />
-                                </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            ادخل بيانات الموظف المسول
-                          </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <div class="row mx-0 pt-4 g-3">
-                              <div class="col-md-4">
-                                <label class="form-label" for="username"> أسم شخص جهة الإتصال (عربي)</label>
-                                <input type="text" id="username" class="form-control" placeholder="الاسم بالعربى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="username-e"> أسم شخص جهة الإتصال (إنجليزي)</label>
-                                <input type="text" id="username-e" class="form-control" placeholder=" أسم شخص جهة الإتصال " />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="username"> صفة شخص جهة الإتصال (عربي)</label>
-                                <input type="text" id="username" class="form-control" placeholder="صفة بالعربى" />
-                              </div>
-                              <div class="col-md-4">
-                                <label class="form-label" for="username-e"> صفة شخص جهة الإتصال (إنجليزي)</label>
-                                <input type="text" id="username-e" class="form-control" placeholder=" صفة بالانجيلزى" />
-                              </div>
-                              <div class="form-repeater col-md-8 pt-3">
-                                <div data-repeater-list="group-a">
-                                    <div data-repeater-item class="col-lg-12">
-                                      <div class="row mx-0 g-3">
-                                        <div class="col-12 col-md-6  mt-0">
-                                            <label class="form-label" for="inputFile01"> الادارات <span class="start-form">*</span></label>
-                                            <input type="text" class="form-control" id="inputFile01">
-                                         
-                                        </div>
-                                    
-                                        <div class=" col-lg-2 mt-0 col-12 d-flex align-items-center mb-0">
-                                          <button class="btn btn-label-danger mt-4" type="button" data-repeater-delete>
-                                            <i class="ti ti-x ti-xs me-1"></i>
-                                            <span class="align-middle">Delete</span>
-                                          </button>
-                                        </div>
+                              <th>  طلبات الأجازة</th>
+                             
+                              <th>      إضافة موظف</th>
+                          
+                              <th>المطالبة بالمصروفات</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <div class="d-flex my-switch">
+                                      <div class="form-text text-1">لا</div>
+                      
+                                      <div class="form-check form-switch form-check-inline mx-2">
+                                        <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
                                       </div>
-                                      <hr />
-    
+                      
+                                      <div class="form-text text-2">نعم</div>
                                     </div>
-                                    <div class="mb-3">
-                                      <button class="btn btn-primary" data-repeater-create type="button">
-                                        <i class="ti ti-plus me-1"></i>
-                                        <span class="align-middle">Add New</span>
-                                      </button>
+                                 
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <div class="d-flex my-switch">
+                                      <div class="form-text text-1">لا</div>
+                      
+                                      <div class="form-check form-switch form-check-inline mx-2">
+                                        <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
+                                      </div>
+                      
+                                      <div class="form-text text-2">نعم</div>
                                     </div>
-                                </div>
+                                 
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <div class="d-flex my-switch">
+                                      <div class="form-text text-1">لا</div>
+                      
+                                      <div class="form-check form-switch form-check-inline mx-2">
+                                        <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
+                                      </div>
+                      
+                                      <div class="form-text text-2">نعم</div>
+                                    </div>
+                                 
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <div class="d-flex my-switch">
+                                      <div class="form-text text-1">لا</div>
+                      
+                                      <div class="form-check form-switch form-check-inline mx-2">
+                                        <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
+                                      </div>
+                      
+                                      <div class="form-text text-2">نعم</div>
+                                    </div>
+                                 
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <div class="d-flex my-switch">
+                                      <div class="form-text text-1">لا</div>
+                      
+                                      <div class="form-check form-switch form-check-inline mx-2">
+                                        <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
+                                      </div>
+                      
+                                      <div class="form-text text-2">نعم</div>
+                                    </div>
+                                 
+                                  </div>
+  
+                                </td>
+                              <td>
+                                <div class="form-check form-switch">
+                                  <div class="d-flex my-switch">
+                                    <div class="form-text text-1">لا</div>
+                    
+                                    <div class="form-check form-switch form-check-inline mx-2">
+                                      <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
+                                    </div>
+                    
+                                    <div class="form-text text-2">نعم</div>
+                                  </div>
                                
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                                </div>
+                              </td>
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <div class="d-flex my-switch">
+                                      <div class="form-text text-1">لا</div>
+                      
+                                      <div class="form-check form-switch form-check-inline mx-2">
+                                        <input id="revenue" class="form-check-input form-check-inline" type="checkbox">
+                                      </div>
+                      
+                                      <div class="form-text text-2">نعم</div>
+                                    </div>
+                                 
+                                  </div>
+                                </td>
+                              </tr>
+                              
+                          </tbody>
+                        </table>
                       </div>
                       <div class="pt-2">
-                        <button class="btn btn-primary btn-submit waves-effect waves-light" type="submit">حفظ</button>
+                        <button type="submit" class="btn btn-primary  waves-effect waves-light">حفظ</button>
+  
                       </div>
-                    </form>
-                  </div>
+                     </form>
                 </div>
               </div>
             </div>
